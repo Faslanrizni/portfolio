@@ -5,7 +5,7 @@ import {navLinks} from '../constants';
 import {logo,menu,close} from '../assets'
 
 const Navbar = () => {
-  const [active,setActive] = useState('"');
+  const [active,setActive] = useState('');
   const [toggle,setToggle] = useState(false);
   return (
     <nav className={`${styles.paddingX}' w-full flex item-center py-5 fixed top-0 z-20
