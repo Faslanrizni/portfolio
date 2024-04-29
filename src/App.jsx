@@ -1,7 +1,13 @@
 
 
 import { BrowserRouter } from "react-router-dom";
-import { About,Contact,Experience, Feedbacks,Hero,Navbar,Tech,Works,StarsCanvas } from "./components";
+import { About,Contact,Experience, Feedbacks,Hero,Navbar,Tech,Works,StarsCanvas,  } from "./components";
+import SkillComponent from "./components/SkillComponent.jsx";
+import AboutMe from "./components/AboutNew.jsx";
+// import ProjectNew from "./components/ProjectNew.jsx";
+// import Footer from "./components/Footer.jsx";
+
+
 const App = () => {  
   
   return (
@@ -14,9 +20,14 @@ const App = () => {
             </div>
         </div>
         <About/>
+          <AboutMe/>
         <Experience/>
+          <Works/>
+          {/*<ProjectNew/>*/}
+          <SkillComponent/>
         <Tech/>
-        <Works/>
+          {/*<Footer/>*/}
+
         <Feedbacks/>
         <div className="relative z-0">
         <Contact/>

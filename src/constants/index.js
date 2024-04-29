@@ -58,6 +58,24 @@ import {
       icon: creator,
     },
   ];
+const projectsConstants = [
+  {
+    title: "Web Developer",
+    icon: web,
+  },
+  {
+    title: "React Native Developer",
+    icon: mobile,
+  },
+  {
+    title: "Backend Developer",
+    icon: backend,
+  },
+  {
+    title: "Content Creator",
+    icon: creator,
+  },
+];
   
   const technologies = [
     {
@@ -262,4 +280,4 @@ import {
     },
   ];
   
-  export { services, technologies, experiences, testimonials, projects };
+  export { services, technologies, experiences, projectsConstants,testimonials, projects };

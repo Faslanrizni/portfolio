@@ -1,0 +1,591 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', serif;
+}
+
+.Subheader a {
+    text-decoration: none;
+    color: aliceblue;
+}
+.Subheader {
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(https://png.pngtree.com/background/20211217/original/pngtree-computer-light-effect-dark-blue-technology-theme-business-background-picture-image_1591409.jpg);
+    /*  This creates a horizontal linear gradient with a semi-transparent dark blue color  from left to right.
+  The alpha value (0.7) controls the opacity, allowing 70% visibility of the background image.*/
+    background-position: center;
+    margin-bottom: 20px;
+    text-align: center;
+    color: aliceblue;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    height: 80vh;
+}
+/*============slider============*/
+.slider {
+    width: 100%;
+    height: 150vh;
+    overflow: hidden;
+    position: relative;
+    top: -300px;
+    z-index: -1;
+}
+.slide{
+    margin-top: 20vh;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;/* both slide are not visible because of opacity is 0 */
+}
+.slide.active{ /* User action pseudo class*/
+    opacity: 1;/* Semi-transparent , opacity is 1 when slide is active so at a timme only visible active slide */
+}
+
+@media only screen and (max-width: 480px) { /*Apply the following styles only if the screen width is 480 pixels or less*/
+    .slide {
+        margin-top: 5vh;
+        width: 60%;
+    }
+
+}
+/*============slider============*/
+/*=========services===========*/
+.containerNew{
+    margin-top: -300px;
+    width: auto;
+    height:100vh;
+    padding: 0 8%;
+    margin-bottom: -200px;
+}
+.containerNew h1{
+    text-align: center;
+    padding-top: 15px;
+    margin-bottom: 40px;
+    font-weight: 100; /*Text Effects*/
+    position: relative;
+    text-transform: uppercase;
+}
+.rowNew{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(150px,1fr)); /*minmax(250px, 1fr): This sets a minimum and maximum size for the columns.*/
+    grid-gap:25px ; /*25px creates  space between the columns and rows in the grid layout.*/
+}
+.services{
+    text-align: center;
+    padding: 30px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    background: transparent; /* to make sure background content to visible*/
+    height: auto;
+}
+.services i{
+    font-size: 50px;
+    margin-bottom: 10px;
+    color:#303ef7 ;
+}
+.services h2{
+    font-weight: 500; /*Text Effects*/
+    margin-bottom:10px ;
+}
+.services:hover{
+    background:#0F192A;
+    color: white;
+    transform: scale(1.05); /* set to 1.05, which means the element will be scaled to 105% of its original size, when hover*/
+}
+
+/*=========================services===================================*/
+/*===================================footer===========================*/
+
+
+.Subheader a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+@media (max-width: 1000px) {
+    .top-outer {
+        display: none;
+    }
+    .data-wrapper{
+
+    }
+}
+/*==================projects===========*/
+.Projects{
+    width: 100%;
+    height: auto;
+}
+.inner-wrap{
+    width: 100%;
+    height: 250px;
+    padding-top: 25px;
+    padding-bottom:25px;
+    padding-right: 5px;
+}
+.inner{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    /*border: 1px solid red;*/
+    position: relative;
+    transition: transform 1s;
+    background-color: #151030;
+    color: white;
+    flex-wrap:wrap ;
+}
+.inner-wrap-element{
+    flex: 1;
+    display: flex;
+    padding-left: 200px;
+
+}
+.inner .inner-wrap-element:first-child{
+    justify-content: flex-end;
+
+}
+.inner-wrap-element i{
+    font-size: 50px;
+}
+.inner:hover{
+    background-color: #0F192A;
+    cursor: pointer;
+    color: white;
+}
+.movable-element{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: -20px;
+    background-color:rgba(52, 73, 94,1.0) ;
+    right: 100px;
+    transition: all 1s; /*means that any change in CSS properties for the element will have a smooth transition effect over a duration of one second*/
+
+}
+.movable-element i{
+    font-size: 18px;
+}
+.inner:hover .movable-element{
+    transform:translateX(50px);
+}
+
+/*==================projects===========*/
+/*===============services===============*/
+.box1{
+    background-color: #34495E;
+    width: 80%;
+    height: 300px;
+    box-shadow: 10px 5px 10px black;
+    display: flex;
+    flex-direction: column;/*flex items are arranged vertically from top to bottom*/
+    align-items: center;
+
+}
+
+.box1 p{
+    padding: 10px;
+    text-align: justify;
+    color: orange;
+}
+.box1 h3{
+    align-items: center;
+    color: orange;
+}
+.inner-wrap1{
+    width: 100%;
+    height: 400px;
+    /*border:  1px solid red;*/
+    margin-top: -50vh;
+    display: flex;
+    background-color: white;
+    justify-content: center;
+}
+.inner2{
+    flex: 1;/*sets three separate properties at once for a flex item: flex-grow, flex-shrink, and flex-basis.*/
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap:25px ;
+
+}
+@media screen and (max-width:950px){
+    .inner-wrap1{
+        flex-direction:column;
+        /*margin: 30px 50px;*/
+    }
+    .inner2 p {
+        font-size: 10px;
+    }
+    .box1{
+        height: 100px;
+        /*width: 6%;*/
+    }
+    .box1 h3{
+        font-size: 20px;
+    }
+    .inner{
+        flex-direction: column;
+    }
+}
+
+/*===============services===============*/
+/*================Skill===========*/
+.skillClass{
+    background-color:#151030;
+    text-transform: uppercase;
+    width: 700px;
+    margin: 50px auto;
+    padding:20px ;
+    color: white;
+}
+.skillClass h1{
+    text-align: center;
+}
+.skillClass h3{
+    margin:6px ;
+}
+.skillClass ul li{
+    list-style: none;
+    padding: 10px;
+}
+.sub{
+    background: #333333;
+    display: block;
+    height: 15px;
+    border:  1px solid black;
+    overflow: hidden;
+    transition: all 0.2s cubic-bezier(.25,.5,.25,1);
+    border-radius: 15px;
+}
+
+.sub:hover{
+    box-shadow: 0 5px 20px black;
+}
+.sub span{
+    height: 30px;
+    float: left;
+    background: #994AE0;
+}
+.html{ /* html is animation identification name in here */
+    width:85%;
+    animation: html 4s;
+}
+.css{
+    width:70%;
+    animation: css 4s;
+}
+.java{
+    width:75%;
+    animation: css 4s;
+}
+.spring{
+    width: 50%;
+    animation: spring 4s;
+}
+.python{
+    width: 50%;
+    animation:python 4s;
+}
+.angular{
+    width: 60%;
+    animation:angular 4s;
+}
+.sql{
+    width: 60%;
+    animation:sql 4s;
+}
+.javaScript{
+    width: 40%;
+    animation:sql 4s;
+}
+@keyframes html {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 85%;
+    }
+}
+@keyframes css {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 70%;
+    }
+}
+@keyframes java {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 75%;
+    }
+}
+
+@keyframes spring {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 50%;
+    }
+}
+@keyframes sql {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 60%;
+    }
+}
+@keyframes angular {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 60%;
+    }
+}
+@keyframes python {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 50%;
+    }
+}
+@keyframes javaScript {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 40%;
+    }
+}
+/*================Skill===========*/
+
+
+@media screen and (max-width:820px){
+    .contact-section{
+        flex-direction:column;
+
+    }
+    .formClass h2{
+        font-size: 20px;
+    }
+    .formClass .text-box{
+        width: 100%;
+    }
+    .containerNew{
+        height: 150vh;
+    }
+    .footer{
+        height: 500px;
+    }
+    .services{
+        padding-bottom: 150px;
+    }
+    .containerNew {
+        margin-bottom: 500px;
+    }
+    .contact .text-box{
+        width: 60%;
+
+    }
+    .contact textarea{
+        width: 60%;
+    }
+    .info,.formClass{
+        margin: 30px 30px;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:1000px) and (min-width: ){
+    .row{
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin: 50px 50px;
+    }
+    .skillClass{
+        width: 70%;
+    }
+}
+.container h1{
+    text-align: center;
+}
+.formClass .btn{
+    margin-top:50px;
+    margin-right: 320px;
+}
+/*========css for animation in subheader================*/
+.box{
+    width: 100px;
+    height: 100px;
+    color: white;
+    display: flex; align-items: center; justify-content: center;
+    animation: fade 3s linear infinite;
+    font-size: 50px;
+    font-weight: 1000;
+}
+.outer{
+    width: 100%;
+}
+.box22{
+    animation-delay: 0.1s;
+}
+.box33{
+    animation-delay: 0.2s;
+}
+.box44{
+    animation-delay: 0.3s;
+}
+.box55{
+    animation-delay: 0.4s;
+}
+.box66{
+    animation-delay: 0.5s;
+}
+.outerNew{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+@keyframes fade {
+    0%,100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+/*========css for animation in subheader================*/
+/*=========about me===========*/
+.aboutMe {
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+
+}
+
+.aboutCol p{
+    padding-left: 10px;
+    padding-right: 10px;
+    justify-content: center;
+}
+.aboutCol h1{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.projectRow {
+    justify-content: space-between;
+    background-color: #121213;
+    margin: 20px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr)); /*minmax(250px, 1fr): This sets a minimum and maximum size for the columns.*/
+    grid-gap:25px ; /*25px creates  space between the columns and rows in the grid layout.*/
+}
+.team-item-outer{
+    width: 350px;
+    height: 350px;
+    /*border: 1px solid red;*/
+    background-image: url("src/assets/aput.JPG");
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+}
+.elementAboutMe{
+    width: 100%;
+    height: 180px;
+    background-color: rgba(52, 73, 94,0.5);
+    position: absolute;
+    transition: all 1s linear; /* making any changes over a one-second duration with a constant speed, linear is time function*/
+    overflow: hidden;
+}
+.top-element{
+    top: -200px;
+}
+.bottom-element{
+    bottom: -200px;
+}
+.team-item-outer:hover .bottom-element{
+    bottom: -8px;
+}
+.team-item-outer:hover .top-element{
+    top: 0;
+}
+.data-wrapper{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+.team-item-outer:hover .data-wrapper{
+    display: flex;
+}
+.name{
+    color: white;  /*Text decoration*/
+    font-size: 25px;
+    font-weight: 600;
+}
+.designation{
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+}
+.social-icon-wrapper ul li{
+    margin-right: 15px;
+    color: white;
+}
+
+.social-icon-wrapper i{
+    color: white;
+    font-weight: 500;
+}
+.social-icon-wrapper ul li:last-child{ /*Structural selectors*/
+    margin-right: 0;
+
+}
+.social-icon-wrapper{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icon-wrapper ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    /*border: 1px solid red;*/
+}
+.row {
+    /*margin-top: 5px;*/
+    display: flex;
+    justify-content: space-between;
+    background-color: #121213;
+}
+/*.border-green-pink-gradient {
+    border-width: 1px;
+    border-style: solid;
+    border-image: linear-gradient(to right, #00ff00, #ff69b4) 1;
+}*/
