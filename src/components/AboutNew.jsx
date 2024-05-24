@@ -1,11 +1,14 @@
 import React from 'react';
 import '../style/style.css';
 import {Helmet} from "react-helmet";
+import {styles} from "../styles.js";
+import {fadeIn} from "../utils/motion.js";
+import {motion} from "framer-motion";
 
 const AboutMe = () => {
     return (
 
-        <section className="aboutMe">
+        <section className="aboutMe  border-1px-orange-gold-gradient">
             <Helmet>
                 <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap" rel="stylesheet" />
                 <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@200&family=Oswald&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
@@ -42,8 +45,19 @@ const AboutMe = () => {
                     </div>
                 </div>
                 <div className="aboutCol">
-                    <h1>About Me</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi, atque commodi corporis cumque earum facere nostrum odio omnis quas? Dolorem doloremque, earum inventore libero maiores quibusdam velit vitae voluptatibus? Amet, commodi labore nemo non odit placeat rerum? Assumenda atque corporis fuga in nihil vero voluptates. Placeat qui ratione sequi?</p>
+                    <h1 className={styles.sectionHeadText}>About Me</h1>
+                    <motion.p variants={fadeIn("","",0.1,1)}
+                              className={'mt-4 text-secondary text-[17px]' +
+                                  'max-w-3xl leading-[30px]'}
+                    >
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Eaque iure libero nostrum numquam, quibusdam repudiandae voluptate
+                        voluptatem. Aliquid incidunt modi optio. Esse quia quis soluta!
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Eaque iure libero nostrum numquam, quibusdam repudiandae voluptate
+                        voluptatem. Aliquid incidunt modi optio. Esse quia quis soluta!
+
+                    </motion.p>
                 </div>
             </div>
         </section>
