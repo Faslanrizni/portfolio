@@ -50,12 +50,9 @@ const AboutMe = () => {
                               className={'mt-4 text-secondary text-[17px]' +
                                   'max-w-3xl leading-[30px]'}
                     >
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Eaque iure libero nostrum numquam, quibusdam repudiandae voluptate
-                        voluptatem. Aliquid incidunt modi optio. Esse quia quis soluta!
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Eaque iure libero nostrum numquam, quibusdam repudiandae voluptate
-                        voluptatem. Aliquid incidunt modi optio. Esse quia quis soluta!
+                        I possess extensive knowledge and hands-on experience in Spring Boot, Spring Security, Spring Microservices,
+                        and MERN stack technologies.
+                        Additionally, I am deeply passionate about machine learning and continuously strive to explore its applications.
 
                     </motion.p>
                 </div>

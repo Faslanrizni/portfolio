@@ -10,7 +10,10 @@ body {
     font-family: 'Roboto', serif;
 }
 
-
+.gradient-bg {
+    background: linear-gradient(to bottom, #1e3a8a, #000); /* from blue-900 to black */
+    height: 100vh; /* Ensure it covers the full viewport height */
+}
 /*.Subheader a {
     text-decoration: none;
     color: aliceblue;

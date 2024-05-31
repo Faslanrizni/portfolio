@@ -1,6 +1,7 @@
 import React from 'react'
 import {styles} from "../styles";
 import { FaGithub } from "react-icons/fa";
+/**/
 
 const Works = () => {
   return (
@@ -12,9 +13,11 @@ const Works = () => {
               <div className="inner">
                 <div className="inner-wrap-element"><i className="fa fa-user-circle" aria-hidden="true"></i></div>
                 <div className="inner-wrap-element">
-                  <p>Progression<br />Outcome predictor<br />Python application</p>
+                  <p>Order-Management-system<br />Spring boot application - Microservice</p>
                   <div className="movable-element">
-                    <FaGithub />
+                    <a href="https://github.com/Faslanrizni/Order-Management-system" target="_blank" rel="noopener noreferrer">
+                      <FaGithub />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -23,9 +26,11 @@ const Works = () => {
               <div className="inner">
                 <div className="inner-wrap-element"><i className="fa fa-university" aria-hidden="true"></i></div>
                 <div className="inner-wrap-element">
-                  <p>Layered<br />Architecture<br />java,DBMS application</p>
+                  <p>Hospital Management<br />Spring boot application</p>
                   <div className="movable-element">
-                    <FaGithub />
+                    <a href="https://github.com/Faslanrizni/SpringBootProject" target="_blank" rel="noopener noreferrer">
+                      <FaGithub />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -34,20 +39,25 @@ const Works = () => {
               <div className="inner">
                 <div className="inner-wrap-element"><i className="fa fa-video-camera" aria-hidden="true"></i></div>
                 <div className="inner-wrap-element">
-                  <p>Theatre<br />Management System<br />Java application</p>
+                  <p>English Learning platform for <br />skill professionals <br/> Web application</p>
                   <div className="movable-element">
-                    <FaGithub />
+                    <a href="https://github.com/huzaifaAmeer02" target="_blank" rel="noopener noreferrer">
+                      <FaGithub />
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
+
             <div className="inner-wrap w-full orange-gold-gradient p-[1px] rounded-[20px] shadow-card">
               <div className="inner">
                 <div className="inner-wrap-element"><i className="fa fa-video-camera" aria-hidden="true"></i></div>
                 <div className="inner-wrap-element">
-                  <p>Theatre<br />Management System<br />Java application</p>
+                  <p>Real Estate<br />Management System<br />Web application</p>
                   <div className="movable-element">
-                    <FaGithub />
+                    <a href="https://github.com/Faslanrizni/react_realEstateWeb" target="_blank" rel="noopener noreferrer">
+                      <FaGithub />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -56,9 +66,11 @@ const Works = () => {
               <div className="inner">
                 <div className="inner-wrap-element"><i className="fa fa-graduation-cap" aria-hidden="true"></i></div>
                 <div className="inner-wrap-element">
-                  <p>Edu<br />Planner</p>
+                  <p>Blog page<br />Web application</p>
                   <div className="movable-element">
-                    <FaGithub />
+                    <a href="https://github.com/Faslanrizni/blog-page-client" target="_blank" rel="noopener noreferrer">
+                      <FaGithub />
+                    </a>
                   </div>
                 </div>
               </div>

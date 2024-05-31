@@ -2,6 +2,7 @@ import React from 'react';
 import {motion} from 'framer-motion';
 import {styles} from '../styles';
 import myImage from '../assets/newBg.jpg';
+import myCv from '../assets/FaslanRizni_cv.pdf';
 
 
 
@@ -14,9 +15,17 @@ const Hero = () => {
             <p className={`${styles.heroSubText} mt-2 text-white-100 text-lg`}>
               Full Stack Developer <br /> Machine Learning Enthusiast
             </p>
+              <div className="flex">
+                  <button className={'p-4 orange-gold-gradient rounded-[20px] m-5'}>Contact me</button>
+                  <a href={myCv} download className={'p-4 orange-gold-gradient rounded-[20px] m-5 text-white text-center'}>
+                      Download CV
+                  </a>
+              </div>
+
           </div>
           <div className="flex justify-center items-center mt-5">
             <img src={myImage} alt="Faslan Rizni" className="rounded-lg shadow-lg w-[600px] h-auto" />
+
           </div>
         </div>
       </section>
