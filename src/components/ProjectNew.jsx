@@ -42,7 +42,7 @@ const About = () => {
     return (
         <>
 
-            <div className={'mt-20 flex flex-wrap gap-10'}>
+            <div className={'mt-20 flex flex-wrap gap-10'} id={'projects'}>
                 {projectsConstants.map((service,index)=>(
                     <ServiceCard key={service.title} index={index} {...service} />
                 ))}

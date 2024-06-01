@@ -2,7 +2,7 @@ import React from 'react';
 
 const ContactForm = () => {
   return (
-      <div className="flex flex-col lg:flex-row justify-center items-center w-full min-h-screen bg-100 p-8">
+      <div className="flex flex-col lg:flex-row justify-center items-center w-full min-h-screen bg-100 p-8" id="contact">
         <div className="info text-white-700 max-w-lg text-lg leading-relaxed lg:pr-12 mb-8 lg:mb-0">
           <div className="infoSub flex items-center mb-4">
             <i className="fa fa-map-marker mr-4 text-xl" aria-hidden="true"></i>

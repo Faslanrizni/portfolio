@@ -5,7 +5,7 @@ import { FaGithub } from "react-icons/fa";
 
 const Works = () => {
   return (
-      <div className="Projects  py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col">
+      <div className="Projects  py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col" id={"work"}>
         <div className="container">
           <h1>Projects</h1>
           <div className="projectRow ">

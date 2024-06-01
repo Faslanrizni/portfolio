@@ -14,46 +14,7 @@ body {
     background: linear-gradient(to bottom, #1e3a8a, #000); /* from blue-900 to black */
     height: 100vh; /* Ensure it covers the full viewport height */
 }
-/*.Subheader a {
-    text-decoration: none;
-    color: aliceblue;
-}*/
-/*.Subheader {
-    width: 100%;
-    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url();
-    !*  This creates a horizontal linear gradient with a semi-transparent dark blue color  from left to right.
-  The alpha value (0.7) controls the opacity, allowing 70% visibility of the background image.*!
-    background-position: center;
-    margin-bottom: 20px;
-    text-align: center;
-    color: aliceblue;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    position: relative;
-    height: 80vh;
-}*/
-/*!*============slider============*!
-.slider {
-    width: 100%;
-    height: 150vh;
-    overflow: hidden;
-    position: relative;
-    top: -300px;
-    z-index: -1;
-}
-.slide{
-    margin-top: 20vh;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    opacity: 0;!* both slide are not visible because of opacity is 0 *!
-}
-.slide.active{ !* User action pseudo class*!
-    opacity: 1;!* Semi-transparent , opacity is 1 when slide is active so at a timme only visible active slide *!
-}*/
+
 
 @media only screen and (max-width: 480px) { /*Apply the following styles only if the screen width is 480 pixels or less*/
     .slide {
@@ -62,55 +23,8 @@ body {
     }
 
 }
-/*============slider============*/
-/*
-!*=========services===========*!
-.containerNew{
-    margin-top: -300px;
-    width: auto;
-    height:100vh;
-    padding: 0 8%;
-    margin-bottom: -200px;
-}
-.containerNew h1{
-    text-align: center;
-    padding-top: 15px;
-    margin-bottom: 40px;
-    font-weight: 100; !*Text Effects*!
-    position: relative;
-    text-transform: uppercase;
-}
-.rowNew{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(150px,1fr)); !*minmax(250px, 1fr): This sets a minimum and maximum size for the columns.*!
-    grid-gap:25px ; !*25px creates  space between the columns and rows in the grid layout.*!
-}
-.services{
-    text-align: center;
-    padding: 30px 10px;
-    border-radius: 8px;
-    cursor: pointer;
-    background: transparent; !* to make sure background content to visible*!
-    height: auto;
-}
-.services i{
-    font-size: 50px;
-    margin-bottom: 10px;
-    color:#303ef7 ;
-}
-.services h2{
-    font-weight: 500; !*Text Effects*!
-    margin-bottom:10px ;
-}
-.services:hover{
-    background:#0F192A;
-    color: white;
-    transform: scale(1.05); !* set to 1.05, which means the element will be scaled to 105% of its original size, when hover*!
-}
-*/
 
-/*=========================services===================================*/
-/*===================================footer===========================*/
+
 
 
 .Subheader a {
@@ -250,33 +164,7 @@ body {
 
 /*===============services===============*/
 /*================Skill===========*/
-.skillClass{
-    background-color:#151030;
-    text-transform: uppercase;
-    width: 700px;
-    margin: 50px auto;
-    padding:20px ;
-    color: white;
-}
-.skillClass h1{
-    text-align: center;
-}
-.skillClass h3{
-    margin:6px ;
-}
-.skillClass ul li{
-    list-style: none;
-    padding: 10px;
-}
-.sub{
-    background: #333333;
-    display: block;
-    height: 15px;
-    border:  1px solid black;
-    overflow: hidden;
-    transition: all 0.2s cubic-bezier(.25,.5,.25,1);
-    border-radius: 15px;
-}
+
 
 .sub:hover{
     box-shadow: 0 5px 20px black;
@@ -284,7 +172,7 @@ body {
 .sub span{
     height: 30px;
     float: left;
-    background: #994AE0;
+    background:linear-gradient(90deg, #FFA500, #FFD700);
 }
 .html{ /* html is animation identification name in here */
     width:85%;
@@ -302,22 +190,23 @@ body {
     width: 50%;
     animation: spring 4s;
 }
-.python{
-    width: 50%;
-    animation:python 4s;
-}
+
 .angular{
     width: 60%;
     animation:angular 4s;
+}
+.python{
+    width: 50%;
+    animation:python 4s;
 }
 .sql{
     width: 60%;
     animation:sql 4s;
 }
-.javaScript{
-    width: 40%;
-    animation:sql 4s;
-}
+/*.javaScript{
+    width: 50%;
+    animation:javaScript 4s;
+}*/
 @keyframes html {
     0%{
         width: 0;
@@ -351,14 +240,7 @@ body {
         width: 50%;
     }
 }
-@keyframes sql {
-    0%{
-        width: 0;
-    }
-    100%{
-        width: 60%;
-    }
-}
+
 @keyframes angular {
     0%{
         width: 0;
@@ -375,14 +257,22 @@ body {
         width: 50%;
     }
 }
-@keyframes javaScript {
+@keyframes sql {
     0%{
         width: 0;
     }
     100%{
-        width: 40%;
+        width: 60%;
     }
 }
+/*@keyframes javaScript {*/
+/*    0%{*/
+/*        width: 0;*/
+/*    }*/
+/*    100%{*/
+/*        width: 50%;*/
+/*    }*/
+/*}*/
 /*================Skill===========*/
 
 
@@ -560,52 +450,11 @@ body {
 .team-item-outer:hover .data-wrapper{
     display: flex;
 }
-.name{
-    color: white;  /*Text decoration*/
-    font-size: 25px;
-    font-weight: 600;
-}
-.designation{
-    color: white;
-    font-size: 18px;
-    font-weight: 500;
-}
-.social-icon-wrapper ul li{
-    margin-right: 15px;
-    color: white;
-}
 
-.social-icon-wrapper i{
-    color: white;
-    font-weight: 500;
-}
-.social-icon-wrapper ul li:last-child{ /*Structural selectors*/
-    margin-right: 0;
-
-}
-.social-icon-wrapper{
-    width: 100%;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.social-icon-wrapper ul{
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    /*border: 1px solid red;*/
-}
 .row {
     /*margin-top: 5px;*/
     display: flex;
     justify-content: space-between;
     background-color: #121213;
 }
-/*.border-green-pink-gradient {
-    border-width: 1px;
-    border-style: solid;
-    border-image: linear-gradient(to right, #00ff00, #ff69b4) 1;
-}*/
+
