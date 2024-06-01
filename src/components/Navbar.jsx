@@ -17,29 +17,29 @@ const Navbar = () => {
           className='flex items-center gap-2'
           onClick={()=>{
             setActive("");
-            window.scrollTo(0,0)
+            window.scrollTo(40,40)
           }}
         >
-          <img src={logo}alt='logo' className='w-9 min-h-9 object-contain'/>
+          <img src={logo} alt='logo' className='w-9 min-h-9 object-contain'/>
           <p className='text-white text-[18px] font-bold cursor-pointer flex'>
             Faslan | &nbsp;
            <span
            className='sm:block hidden'>FullStack Developer</span></p>
         </Link>
           <ul className='list-none hidden sm:flex flex-row gap-10'>
-            {navLinks.map((Link) =>(
+            {navLinks.map((link) =>(
               <li
-                key={Link.id}
+                key={link.id}
                 className={`${
-                  active === Link.title
+                  active === link.title
                   ? "text-white"
                   : "text-secondary"
                 }hover:text-white text-[18px] font-medium curser-pointer`}
-                onClick={()=>setActive(Link.title)}
+                onClick={()=>setActive(link.title)}
               >
 
 
-                <a href={`#${Link.id}`}>{Link.title}</a>
+                <Link to={`/${link.id}`}>{link.title}</Link>
               </li>
             )
             )}
@@ -55,23 +55,23 @@ const Navbar = () => {
             />
             <div className = {`${!toggle ? 'hidden':'flex'} p-6 black-gradient abolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-x1`} >
             <ul className='list-none flex  justify-end items-start flex-col gap-4'>
-            {navLinks.map((Link) =>(
+            {navLinks.map((link) =>(
               <li
-                key={Link.id}
+                key={link.id}
                 className={`${
-                  active === Link.title
+                  active === link.title
                   ? "text-white"
                   : "text-secondary"
                 }font-poppins font-medium curser-pointer text-[16px]`}
                 onClick={()=>{
                   setToggle(!toggle)
-                  setActive(Link.title);
+                  setActive(link.title);
 
                 }}
               >
 
 
-                <a href={`#${Link.id}`}>{Link.title}</a>
+                <Link to={`/${link.id}`}>{link.title}</Link>
               </li>
             )
             )}

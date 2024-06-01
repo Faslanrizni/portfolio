@@ -422,7 +422,7 @@ body {
     }
 }
 
-@media screen and (max-width:1000px) and (min-width: ){
+/*@media screen and (max-width:1000px) and (min-width: ){
     .row{
         flex-wrap: wrap;
         flex-direction: column;
@@ -431,7 +431,7 @@ body {
     .skillClass{
         width: 70%;
     }
-}
+}*/
 .container h1{
     text-align: center;
 }

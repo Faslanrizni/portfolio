@@ -3,6 +3,7 @@ import {motion} from 'framer-motion';
 import {styles} from '../styles';
 import myImage from '../assets/newBg.jpg';
 import myCv from '../assets/FaslanRizni_cv.pdf';
+import {Link} from "react-router-dom";
 
 
 
@@ -16,7 +17,7 @@ const Hero = () => {
               Full Stack Developer <br /> Machine Learning Enthusiast
             </p>
               <div className="flex">
-                  <button className={'p-4 orange-gold-gradient rounded-[20px] m-5'}>Contact me</button>
+                  <Link to={'/contact'} className={'p-4 orange-gold-gradient rounded-[20px] m-5'}>Contact me</Link>
                   <a href={myCv} download className={'p-4 orange-gold-gradient rounded-[20px] m-5 text-white text-center'}>
                       Download CV
                   </a>

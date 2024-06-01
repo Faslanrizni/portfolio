@@ -1,36 +1,28 @@
-
-
-import { BrowserRouter } from "react-router-dom";
-import { Contact,Hero,Navbar,Works  } from "./components";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Contact, Hero, Navbar, Works } from "./components";
 import SkillComponent from "./components/SkillComponent.jsx";
 import AboutMe from "./components/AboutNew.jsx";
 import ProjectNew from "./components/ProjectNew.jsx";
-// import Footer from "./components/Footer.jsx";
 
-
-const App = () => {  
-  
-  return (
-    
-      <BrowserRouter>
-        <div className="relative z-0 bg-primary">
-            <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
-              <Navbar/>
-              <Hero />
+const App = () => {
+    return (
+        <Router>
+            <div className="relative z-0 bg-primary">
+                <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+                    <Navbar />
+                    <Hero />
+                </div>
+                <Routes>
+                    <Route path="/" element={<Hero />} />
+                    <Route path="/about" element={<AboutMe />} />
+                    <Route path="/work" element={<Works />} />
+                    <Route path="/projects" element={<ProjectNew />} />
+                    <Route path="/skills" element={<SkillComponent />} />
+                    <Route path="/contact" element={<Contact />} />
+                </Routes>
             </div>
-        </div>
-          <AboutMe/>
-          <Works/>
-          <ProjectNew/>
-          <SkillComponent/>
-        <div className="relative z-0">
-        <Contact/>
+        </Router>
+    );
+};
 
-        </div>
-
-      </BrowserRouter>
-  
-  )
-}
-
-export default App
+export default App;
