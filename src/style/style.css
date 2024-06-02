@@ -69,7 +69,7 @@ body {
     cursor: pointer;
     color: white;
 }
-.movable-element{
+/*.movable-element{
     width: 30px;
     height: 30px;
     border-radius: 100%;
@@ -80,25 +80,27 @@ body {
     bottom: -20px;
     background-color:rgba(52, 73, 94,1.0) ;
     right: 100px;
-    transition: all 1s; /*means that any change in CSS properties for the element will have a smooth transition effect over a duration of one second*/
+    transition: all 1s; !*means that any change in CSS properties for the element will have a smooth transition effect over a duration of one second*!
 
-}
-.movable-element i{
+}*/
+/*.movable-element i{
     font-size: 18px;
-}
+}*/
+/*
 .inner:hover .movable-element{
     transform:translateX(50px);
 }
+*/
 
 /*==================projects===========*/
 /*===============services===============*/
-.box1{
+/*.box1{
     background-color: #34495E;
     width: 80%;
     height: 300px;
     box-shadow: 10px 5px 10px black;
     display: flex;
-    flex-direction: column;/*flex items are arranged vertically from top to bottom*/
+    flex-direction: column;!*flex items are arranged vertically from top to bottom*!
     align-items: center;
 
 }
@@ -111,7 +113,7 @@ body {
 .box1 h3{
     align-items: center;
     color: orange;
-}
+}*/
 .inner-wrap1{
     width: 100%;
     height: 400px;
@@ -318,7 +320,7 @@ body {
     margin-right: 320px;
 }
 /*========css for animation in subheader================*/
-.box{
+/*.box{
     width: 100px;
     height: 100px;
     color: white;
@@ -351,7 +353,7 @@ body {
     align-items: center;
     height: 100vh;
     width: 100%;
-}
+}*/
 @keyframes fade {
     0%,100% {
         opacity: 0;
@@ -363,16 +365,18 @@ body {
 
 /*========css for animation in subheader================*/
 /*=========about me===========*/
-.aboutMe {
+/*.aboutMe {
     width: 80%;
     margin: auto;
     padding-top: 80px;
     padding-bottom: 50px;
 
-}
+}*/
+/*
 .text-white-100 {
     color: rgba(255, 255, 255, 0.8);
 }
+*/
 
 /*
 .leading-none {
@@ -380,7 +384,7 @@ body {
 }
 */
 
-.aboutCol p{
+/*.aboutCol p{
     padding-left: 10px;
     padding-right: 10px;
     justify-content: center;
@@ -388,15 +392,15 @@ body {
 .aboutCol h1{
     text-align: center;
     margin-bottom: 10px;
-}
-.projectRow {
+}*/
+/*.projectRow {
     justify-content: space-between;
     background-color: #121213;
     margin: 20px 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(350px,1fr)); /*minmax(250px, 1fr): This sets a minimum and maximum size for the columns.*/
-    grid-gap:25px ; /*25px creates  space between the columns and rows in the grid layout.*/
-}
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr)); !*minmax(250px, 1fr): This sets a minimum and maximum size for the columns.*!
+    grid-gap:25px ; !*25px creates  space between the columns and rows in the grid layout.*!
+}*/
 .team-item-outer{
     width: 350px;
     height: 350px;
@@ -483,7 +487,7 @@ body {
     top: 0;
 }
 
-.data-wrapper {
+/*.data-wrapper {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -492,7 +496,7 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 1;
-}
+}*/
 
 .project-item-outer:hover .data-wrapper {
     display: flex;

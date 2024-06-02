@@ -7,7 +7,7 @@ const Works = () => {
         <div className="w-full h-auto py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col" id="work">
             <div className="container">
                 <h1 className="text-3xl font-bold mb-8">Projects</h1>
-                <div className="projectRow flex flex-wrap justify-center">
+                <div className="grid grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-6 bg-[#121213] m-5 flex flex-wrap justify-center">
                     {projects.map((project, index) => (
                         <div
                             key={index}

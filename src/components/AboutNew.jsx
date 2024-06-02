@@ -11,7 +11,7 @@ import { CiLinkedin } from "react-icons/ci";
 const AboutMe = () => {
     return (
 
-        <section className="aboutMe " id="about">
+        <section className="aboutMe w-4/5 mx-auto pt-20 pb-12 " id="about">
             <Helmet>
                 <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap" rel="stylesheet" />
                 <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@200&family=Oswald&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
@@ -47,11 +47,11 @@ const AboutMe = () => {
                         <div className="bottom-element elementAboutMe"></div>
                     </div>
                 </div>
-                <div className="aboutCol">
+                <div className="text-center mb-2">
                     <h1 className={styles.sectionHeadText}>About Me</h1>
                     <motion.p variants={fadeIn("","",0.1,1)}
                               className={'mt-4 text-secondary text-[17px]' +
-                                  'max-w-3xl leading-[30px]'}
+                                  'max-w-3xl leading-[30px]  px-2 justify-center'}
                     >
                         I possess extensive knowledge and hands-on experience in Spring Boot, Spring Security, Spring Microservices,
                         and MERN stack technologies.
