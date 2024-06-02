@@ -16,35 +16,16 @@ body {
 }
 
 
-@media only screen and (max-width: 480px) { /*Apply the following styles only if the screen width is 480 pixels or less*/
-    .slide {
-        margin-top: 5vh;
-        width: 60%;
-    }
-
-}
-
-
-
-
 .Subheader a {
     text-decoration: none;
     color: aliceblue;
 }
 
-@media (max-width: 1000px) {
-    .top-outer {
-        display: none;
-    }
-    .data-wrapper{
-
-    }
-}
 /*==================projects===========*/
-.Projects{
-    width: 100%;
-    height: auto;
-}
+/*.Projects{*/
+/*    width: 100%;*/
+/*    height: auto;*/
+/*}*/
 .inner-wrap{
     width: 100%;
     height: 250px;
@@ -56,12 +37,19 @@ body {
     display: flex;
     flex-direction: column;
     height: 100%;
+    background-size: contain;
     /*border: 1px solid red;*/
     position: relative;
     transition: transform 1s;
     background-color: #151030;
     color: white;
     flex-wrap:wrap ;
+    /*background-position: center;*/
+    background-repeat: no-repeat;
+    /*padding: 20px;*/
+    padding-top: 50px;
+  /*padding-left: -20px;*/
+
 }
 .inner-wrap-element{
     flex: 1;
@@ -386,9 +374,11 @@ body {
     color: rgba(255, 255, 255, 0.8);
 }
 
+/*
 .leading-none {
     line-height: 1;
 }
+*/
 
 .aboutCol p{
     padding-left: 10px;
@@ -458,3 +448,52 @@ body {
     background-color: #121213;
 }
 
+.project-item-outer {
+    width: 350px;
+    height: 350px;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    margin: 20px;
+}
+
+.elementProject {
+    width: 100%;
+    height: 180px;
+    background-color: rgba(52, 73, 94, 0.5);
+    position: absolute;
+    transition: all 1s linear;
+    overflow: hidden;
+}
+
+.top-element {
+    top: -200px;
+}
+
+.bottom-element {
+    bottom: -200px;
+}
+
+.project-item-outer:hover .bottom-element {
+    bottom: -8px;
+}
+
+.project-item-outer:hover .top-element {
+    top: 0;
+}
+
+.data-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.project-item-outer:hover .data-wrapper {
+    display: flex;
+}

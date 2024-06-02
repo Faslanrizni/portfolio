@@ -6,9 +6,9 @@ import { logo, menu, close } from '../assets';
 
 const Navbar = () => {
   const [active, setActive] = useState('');
-  const [toggle, setToggle] = useState(false);
+  // const [toggle, setToggle] = useState(false);
   const navigate = useNavigate();
-  const location = useLocation();
+  // const location = useLocation();
 
   const handleLinkClick = (id) => {
     setActive(id);
