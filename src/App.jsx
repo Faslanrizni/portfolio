@@ -5,26 +5,36 @@ import SkillComponent from "./components/SkillComponent.jsx";
 import AboutMe from "./components/AboutNew.jsx";
 import Service from "./components/ProjectNew.jsx";
 
+// eslint-disable-next-line react/prop-types
+const Section = ({id,Component})=>(
+    <section id={'id'} className={'py-20'}>
+        <Component/>
+    </section>
+);
+
 // Component to handle scrolling to the specific section
 const ScrollToElement = () => {
-    const { pathname } = useLocation();
-
     useEffect(() => {
-        // Get the ID of the target element from the pathname
-        const elementId = pathname.substring(1);
-        const element = document.getElementById(elementId);
+        const handleScroll = () => {
+            const sections = document.querySelectorAll('section');
+            const scrollPosition = window.scrollY + 100; // Adjust offset as needed
 
-        // Scroll to the element if it exists, otherwise scroll to the top
-        if (element) {
-            element.scrollIntoView({ behavior: "smooth" });
-        } else {
-            window.scrollTo(0, 0);
-        }
-    }, [pathname]);
+            sections.forEach((section) => {
+                if (
+                    scrollPosition >= section.offsetTop &&
+                    scrollPosition < section.offsetTop + section.offsetHeight
+                ) {
+                    history.replaceState(null, null, `/${section.id}`);
+                }
+            });
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     return null;
 };
-
 const App = () => {
     return (
         <Router>
@@ -34,14 +44,14 @@ const App = () => {
                     <Navbar />
                     <Hero />
                 </div>
-                <Routes>
+                <div>
 
-                    <Route path="/about" element={<AboutMe />} />
-                    <Route path="/work" element={<Works />} />
-                    <Route path="/projects" element={<Service />} />
-                    <Route path="/skills" element={<SkillComponent />} />
-                    <Route path="/contact" element={<Contact />} />
-                </Routes>
+                    <Section id="about" Component={AboutMe} />
+                    <Section id="work" Component={Works} />
+                    <Section id="projects" Component={Service} />
+                    <Section id="skills" Component={SkillComponent} />
+                    <Section id="contact" Component={Contact} />
+                </div>
             </div>
         </Router>
     );

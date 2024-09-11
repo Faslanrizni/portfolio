@@ -69,51 +69,7 @@ body {
     cursor: pointer;
     color: white;
 }
-/*.movable-element{
-    width: 30px;
-    height: 30px;
-    border-radius: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    bottom: -20px;
-    background-color:rgba(52, 73, 94,1.0) ;
-    right: 100px;
-    transition: all 1s; !*means that any change in CSS properties for the element will have a smooth transition effect over a duration of one second*!
 
-}*/
-/*.movable-element i{
-    font-size: 18px;
-}*/
-/*
-.inner:hover .movable-element{
-    transform:translateX(50px);
-}
-*/
-
-/*==================projects===========*/
-/*===============services===============*/
-/*.box1{
-    background-color: #34495E;
-    width: 80%;
-    height: 300px;
-    box-shadow: 10px 5px 10px black;
-    display: flex;
-    flex-direction: column;!*flex items are arranged vertically from top to bottom*!
-    align-items: center;
-
-}
-
-.box1 p{
-    padding: 10px;
-    text-align: justify;
-    color: orange;
-}
-.box1 h3{
-    align-items: center;
-    color: orange;
-}*/
 .inner-wrap1{
     width: 100%;
     height: 400px;
@@ -302,16 +258,7 @@ body {
     }
 }
 
-/*@media screen and (max-width:1000px) and (min-width: ){
-    .row{
-        flex-wrap: wrap;
-        flex-direction: column;
-        margin: 50px 50px;
-    }
-    .skillClass{
-        width: 70%;
-    }
-}*/
+
 .container h1{
     text-align: center;
 }
@@ -319,41 +266,7 @@ body {
     margin-top:50px;
     margin-right: 320px;
 }
-/*========css for animation in subheader================*/
-/*.box{
-    width: 100px;
-    height: 100px;
-    color: white;
-    display: flex; align-items: center; justify-content: center;
-    animation: fade 3s linear infinite;
-    font-size: 50px;
-    font-weight: 1000;
-}
-.outer{
-    width: 100%;
-}
-.box22{
-    animation-delay: 0.1s;
-}
-.box33{
-    animation-delay: 0.2s;
-}
-.box44{
-    animation-delay: 0.3s;
-}
-.box55{
-    animation-delay: 0.4s;
-}
-.box66{
-    animation-delay: 0.5s;
-}
-.outerNew{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
-}*/
+
 @keyframes fade {
     0%,100% {
         opacity: 0;
@@ -365,42 +278,7 @@ body {
 
 /*========css for animation in subheader================*/
 /*=========about me===========*/
-/*.aboutMe {
-    width: 80%;
-    margin: auto;
-    padding-top: 80px;
-    padding-bottom: 50px;
 
-}*/
-/*
-.text-white-100 {
-    color: rgba(255, 255, 255, 0.8);
-}
-*/
-
-/*
-.leading-none {
-    line-height: 1;
-}
-*/
-
-/*.aboutCol p{
-    padding-left: 10px;
-    padding-right: 10px;
-    justify-content: center;
-}
-.aboutCol h1{
-    text-align: center;
-    margin-bottom: 10px;
-}*/
-/*.projectRow {
-    justify-content: space-between;
-    background-color: #121213;
-    margin: 20px 20px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(350px,1fr)); !*minmax(250px, 1fr): This sets a minimum and maximum size for the columns.*!
-    grid-gap:25px ; !*25px creates  space between the columns and rows in the grid layout.*!
-}*/
 .team-item-outer{
     width: 350px;
     height: 350px;

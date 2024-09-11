@@ -8,7 +8,6 @@ const skills = [
     { name: 'Spring', width: '50%' },
     { name: 'Python', width: '50%' },
     { name: 'SQL', width: '60%' },
-    // { name: 'JavaScript', width: '50%' },
     { name: 'Angular', width: '60%' },
 ];
 
