@@ -59,10 +59,12 @@ const AboutMe = () => {
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.1, duration: 1 }}
                     >
-                        I possess extensive knowledge and hands-on experience in Spring
-                        Boot, Spring Security, Spring Microservices, and MERN stack
-                        technologies. Additionally, I am deeply passionate about machine
-                        learning and continuously strive to explore its applications.
+                        As a dedicated Software Engineer,
+                        I specialize in backend development with a strong focus on technologies like NestJS and PostgreSQL,
+                        while also having hands-on experience with Spring Boot and MERN stack.
+                        My passion extends beyond software development into Machine Learning and Computer Vision, where I continuously explore innovative solutions.
+
+                        Outside of tech, I am deeply committed to helping others, particularly those facing challenges in education. I believe in the power of knowledge and am always eager to assist in making learning accessible. Additionally, I have a strong interest in social work, striving to make a positive impact in my community
                     </motion.p>
 
                     {/* Social Icons */}
