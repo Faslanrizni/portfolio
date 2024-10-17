@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { CgCPlusPlus } from "react-icons/cg";
 import {
     DiJavascript1,
@@ -9,14 +9,8 @@ import {
     DiGit,
     DiJava,
 } from "react-icons/di";
-import {
-    SiRedis,
-    SiFirebase,
-    SiNextdotjs,
-    SiSolidity,
-    SiPostgresql,
-} from "react-icons/si";
-import { TbBrandGolang } from "react-icons/tb";
+import { SiFirebase, SiNextdotjs, SiPostgresql } from "react-icons/si";
+import { motion, useInView } from "framer-motion"; // Import useInView
 
 // Add styles for hover and transition effects
 const iconStyle = {
@@ -57,36 +51,53 @@ const headerStyle = {
     fontWeight: "bold",
 };
 
+// Framer Motion variants for the staggered effect
+const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.2, // Delay between each child animation
+        },
+    },
+};
+
+const itemVariants = {
+    hidden: { opacity: 0, scale: 0 },
+    visible: { opacity: 1, scale: 1, transition: { type: "spring", stiffness: 100 } },
+};
+
 const Techstack = () => {
+    const ref = useRef(null);
+    const inView = useInView(ref, { once: true }); // Trigger only once when in view
+
     return (
-        <div style={containerStyle} className="techstack-section" id={"skills"}>
-            <h2 className="text-center mb-5" style={headerStyle}>
-                Professional <span style={{ color: "#f72eac" }}>Skillset</span>
-            </h2>
+        <motion.div
+            ref={ref}
+            style={containerStyle}
+            className="techstack-section"
+            id={"skills"}
+            variants={containerVariants}
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"} // Animate based on inView state
+        >
             <div style={gridContainerStyle}>
-                <TechIcon icon={<CgCPlusPlus />} />
                 <TechIcon icon={<DiJavascript1 />} />
-                <TechIcon icon={<TbBrandGolang />} />
                 <TechIcon icon={<DiNodejs />} />
                 <TechIcon icon={<DiReact />} />
-                <TechIcon icon={<SiSolidity />} />
                 <TechIcon icon={<DiMongodb />} />
-                <TechIcon icon={<SiNextdotjs />} />
                 <TechIcon icon={<DiGit />} />
-                <TechIcon icon={<SiFirebase />} />
-                <TechIcon icon={<SiRedis />} />
                 <TechIcon icon={<SiPostgresql />} />
                 <TechIcon icon={<DiPython />} />
                 <TechIcon icon={<DiJava />} />
             </div>
-        </div>
+        </motion.div>
     );
 };
 
-// Separate component for Tech Icons with hover effect
 const TechIcon = ({ icon }) => {
     return (
-        <div
+        <motion.div
             style={cardStyle}
             className="tech-icon"
             onMouseEnter={(e) => {
@@ -97,9 +108,10 @@ const TechIcon = ({ icon }) => {
                 e.currentTarget.style.transform = "scale(1)";
                 e.currentTarget.style.boxShadow = "none";
             }}
+            variants={itemVariants}
         >
             <div style={iconStyle}>{icon}</div>
-        </div>
+        </motion.div>
     );
 };
 

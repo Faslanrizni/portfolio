@@ -1,3 +1,4 @@
+/*
 import React from 'react';
 import { Html,useProgress } from '@react-three/drei';
 import { progress } from 'framer-motion';
@@ -18,4 +19,4 @@ const Loader = () => {
   )
 }
 
-export default Loader
+export default Loader*/

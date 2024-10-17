@@ -14,7 +14,25 @@ body {
     background: linear-gradient(to bottom, #1e3a8a, #000); /* from blue-900 to black */
     height: 100vh; /* Ensure it covers the full viewport height */
 }
+@font-face {
+    font-family: 'RetroPixel';
+    src: url('path-to-your-pixel-font.woff2') format('woff2'),
+    url('path-to-your-pixel-font.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.border-gradient {
+    background: linear-gradient(45deg, orange, gold);
+    padding: 1px; /* This creates the gradient border effect */
+    border-radius: 20px; /* Matches the inner element's border radius */
+}
 
+.font-retro {
+    font-family: 'RetroPixel', monospace;
+    font-smooth: never;
+    -webkit-font-smoothing : none;
+    image-rendering: pixelated;
+}
 
 .Subheader a {
     text-decoration: none;

@@ -16,7 +16,7 @@ const AboutMe = () => {
                 <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap" rel="stylesheet" />
                 <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@200&family=Oswald&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
             </Helmet>
-            <div className="row flex flex-col md:flex-row max-w-8xl mx-auto shadow-lg bg-gray-800 rounded-lg overflow-hidden">
+            <div className="row flex flex-col md:flex-row max-w-8xl mx-auto shadow-lg {/*bg-gray-800*/} rounded-lg overflow-hidden">
                 <div className="container md:w-1/3">
                     <div className="team-item-outer">
                         <div className="top-element elementAboutMe">

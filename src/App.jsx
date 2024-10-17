@@ -1,11 +1,12 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
-import { Contact, Hero, Navbar, Works } from "./components";
+import { Hero, Navbar, Works } from "./components";
 import SkillComponent from "./components/SkillComponent.jsx";
 import AboutMe from "./components/AboutNew.jsx";
 import Service from "./components/ProjectNew.jsx";
 import Experience from "./components/Experiance.jsx";
 import Techstack from "./components/teckStack"
+import Footer from "./components/Footer.jsx";
 // import Toolstack from "./components/toolstack.jsx";
 
 // eslint-disable-next-line react/prop-types
@@ -48,16 +49,18 @@ const App = () => {
                     <Hero />
                 </div>
                 <div>
-
-                    <Section id="about" Component={AboutMe} />
                     <Section id="projects" Component={Service} />
+                    <Section id="skills" Component={Techstack} />
+                    <Section id="skills" Component={SkillComponent} />
+                    <Section id="about" Component={AboutMe} />
+
                     <Section id="experience" Component={Experience} />
                     <Section id="work" Component={Works} />
-                    <Section id="skills" Component={Techstack} />
-                    {/*<Section id="skills" Component={Toolstack} />*/}
-                    <Section id="skills" Component={SkillComponent} />
-                    <Section id="contact" Component={Contact} />
 
+                    {/*<Section id="skills" Component={Toolstack} />*/}
+
+
+                    <Section id="contact" Component={Footer} />
                 </div>
             </div>
         </Router>
