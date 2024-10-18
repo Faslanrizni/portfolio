@@ -104,7 +104,7 @@ const ExperienceEducationComponent = () => {
 
     return (
         <div className="aboutMe w-4/5 mx-auto pt-20 pb-12 text-white w-full max-w-7xl mx-auto my-12 p-8 rounded-lg" id="about">
-            <h1 className="text-center text-3xl mb-8 font-bold">About me</h1>
+            {/*<h1 className="text-center text-3xl mb-8 font-bold">About me</h1>*/}
             <div className="flex flex-col md:flex-row gap-8" ref={ref}>
                 <section id="experience" className="w-full md:w-1/2">
                     <h2 className="text-center text-2xl mb-6 font-semibold">Experience</h2>

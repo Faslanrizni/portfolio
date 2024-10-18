@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { CiFacebook, CiTwitter } from 'react-icons/ci';
-import { FaLinkedin,FaGithub ,FaInstagram} from 'react-icons/fa';
+import {FaLinkedin, FaGithub, FaInstagram, FaEnvelope} from 'react-icons/fa';
 
 const Footer = () => {
     return (
@@ -29,7 +29,13 @@ const Footer = () => {
                         <h6 className="text-2xl font-bold mb-4 text-purple-500">Contact Information</h6>
                         <p className="text-gray-300 mb-3">Galle, Sri Lanka</p>
                         <p className="text-gray-300 mb-3">+94 762720321</p>
-                        <p className="text-gray-300">faslan2002rizni@gmail.com</p>
+                        <a
+                            href="mailto:mailto:catalystcrystal33@gmail.com"
+                            className="flex items-center  gap-2 text-gray hover:text-green-800 transition"
+                        >
+                            <FaEnvelope size={24} />
+                            <span className="text-gray-300 mb-3">Contact me via Email</span>
+                        </a>
                     </div>
 
                     <div className="col-span-1 md:col-span-1 flex justify-center md:justify-start items-center space-x-6">

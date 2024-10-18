@@ -7,6 +7,7 @@ import Service from "./components/ProjectNew.jsx";
 import Experience from "./components/Experiance.jsx";
 import Techstack from "./components/teckStack"
 import Footer from "./components/Footer.jsx";
+import gem from "./components/gem.jsx";
 // import Toolstack from "./components/toolstack.jsx";
 
 // eslint-disable-next-line react/prop-types
@@ -56,6 +57,7 @@ const App = () => {
 
                     <Section id="experience" Component={Experience} />
                     <Section id="work" Component={Works} />
+                    <Section id="work" Component={gem} />
 
                     {/*<Section id="skills" Component={Toolstack} />*/}
 
