@@ -8,28 +8,27 @@ import Experience from "./components/Experiance.jsx";
 import Techstack from "./components/teckStack"
 import Footer from "./components/Footer.jsx";
 import gem from "./components/gem.jsx";
-// import Toolstack from "./components/toolstack.jsx";
 
-// eslint-disable-next-line react/prop-types
-const Section = ({id,Component})=>(
-    <section id={'id'} className={'py-20'}>
+const Section = ({id, Component}) => (
+    <section id={id} className={'py-20'}>
         <Component/>
     </section>
 );
 
-// Component to handle scrolling to the specific section
 const ScrollToElement = () => {
+    const location = useLocation();
+
     useEffect(() => {
         const handleScroll = () => {
             const sections = document.querySelectorAll('section');
-            const scrollPosition = window.scrollY + 100; // Adjust offset as needed
+            const scrollPosition = window.scrollY + 100;
 
             sections.forEach((section) => {
                 if (
                     scrollPosition >= section.offsetTop &&
                     scrollPosition < section.offsetTop + section.offsetHeight
                 ) {
-                    history.replaceState(null, null, `/${section.id}`);
+                    history.replaceState(null, null, `#${section.id}`);
                 }
             });
         };
@@ -38,8 +37,19 @@ const ScrollToElement = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    useEffect(() => {
+        const hash = location.hash.replace('#', '');
+        if (hash) {
+            const element = document.getElementById(hash);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    }, [location]);
+
     return null;
 };
+
 const App = () => {
     return (
         <Router>
@@ -52,11 +62,10 @@ const App = () => {
                 <div>
                     <Section id="projects" Component={Service} />
                     <Section id="skills" Component={Techstack} />
-                    <Section id="skills" Component={SkillComponent} />
                     <Section id="about" Component={AboutMe} />
                     <Section id="experience" Component={Experience} />
                     <Section id="work" Component={Works} />
-                    <Section id="work" Component={gem} />
+                    <Section id="gem" Component={gem} />
                     <Section id="contact" Component={Footer} />
                 </div>
             </div>
