@@ -23,7 +23,7 @@ const AboutMe = () => {
                         <div className="top-element elementAboutMe">
                             <div className="data-wrapper">
                                 <h3 className="text-white-100 text-xl font-semibold ">Faslan Rizni</h3>
-                                <h4 className="text-white text-lg font-medium">Computer Science Undergraduate</h4>*/
+                                <h4 className="text-white text-lg font-medium">Computer Science Undergraduate</h4>
                                 <div className="w-full h-16 flex items-center justify-center">
                                     <ul className="flex list-none m-0 p-0">
                                         <li className="mr-4 text-white">
