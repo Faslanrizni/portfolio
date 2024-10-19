@@ -8,6 +8,7 @@ permissions:
   id-token: write
   contents: read
 
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -28,11 +29,14 @@ jobs:
       - name: upload artifacts
         uses: actions/upload-pages-artifact@v3
         with:
-          name: 'github-pages'
-          path: dist
+         name: 'github-pages'
+         path: dist
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          artifact_name: 'github-pages'
+          artifacts_name: 'github-pages'
+
+
+
