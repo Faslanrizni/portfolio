@@ -36,7 +36,7 @@ const GemInterestComponent = () => {
 
                     <div className="{/*bg-[#151030]*/} shadow-lg rounded-lg p-8 md:w-2/5">
                         <img
-                            src="src/assets/mail.jpeg"  // Replace with your actual image
+                            src="src/assets/mail.jpg"  // Replace with your actual image
                             alt="call me"
                             className="rounded-lg mb-4"
                         />
