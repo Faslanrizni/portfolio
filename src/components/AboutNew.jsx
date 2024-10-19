@@ -7,9 +7,22 @@ import {motion} from "framer-motion";
 import { FaGithub } from "react-icons/fa";
 import { CiFacebook } from "react-icons/ci";
 import { CiLinkedin } from "react-icons/ci";
+import aput from '../assets/aput.jpg';
 
 const AboutMe = () => {
+    const styles = {
+        teamItemOuter: {
+            width: '350px',
+            height: '350px',
+            backgroundImage: `url(${aput})`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            overflow: 'hidden',
+            position: 'relative',
+        },
+    };
     return (
+
 
         <section className="aboutMe w-4/5 mx-auto pt-20 pb-12 " id="about">
             <Helmet>
@@ -18,7 +31,7 @@ const AboutMe = () => {
             </Helmet>
             <div className="row flex flex-col md:flex-row max-w-8xl mx-auto shadow-lg {/*bg-gray-800*/} rounded-lg overflow-hidden">
                 <div className="container md:w-1/3">
-                    <div className="team-item-outer">
+                    <div style={styles.teamItemOuter} className="team-item-outer">
                         <div className="top-element elementAboutMe">
                             <div className="data-wrapper">
                                 <h3 className="text-white-100 text-xl font-semibold ">Faslan Rizni</h3>
