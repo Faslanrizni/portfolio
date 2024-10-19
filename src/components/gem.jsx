@@ -16,7 +16,7 @@ const GemInterestComponent = () => {
                 <div className="flex flex-col md:flex-row items-center justify-center gap-6">
                     <div className="{/*bg-[#151030]*/} shadow-lg rounded-lg p-8 md:w-2/5">
                         <img
-                            src="src/assets/gem1.jpeg"  // Replace with your actual image
+                            src="src/assets/gem1.jpg"  // Replace with your actual image
                             alt="Gem Collection"
                             className="rounded-lg mb-4"
                         />

@@ -301,7 +301,7 @@ body {
     width: 350px;
     height: 350px;
     /*border: 1px solid red;*/
-    background-image: url("src/assets/aput.JPG");
+    background-image: url("src/assets/aput.jpg");
     background-position: center;
     background-size: cover;
     overflow: hidden;
