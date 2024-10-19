@@ -8,7 +8,7 @@ const GemInterestComponent = () => {
         <section className=" from-gray-100 to-gray-200 py-12">
             <div className="container mx-auto px-6 md:px-12 lg:px-20">
                 <h2 className="text-4xl font-bold text-center text-white mb-6">
-                    My Passion Beyond Tech: Gems & Jewelry
+                    Beyond Code: A Journey into Gemstones
                 </h2>
                 <p className="text-center text-lg  mb-12  text-secondary  leading-6 text-gray-300">
                     Besides my career in tech, I'm deeply fascinated by the beauty of gems and jewelry. I love exploring and learning about the different types of gems from around the world.
