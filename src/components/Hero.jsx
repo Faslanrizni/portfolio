@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-
+import aput from '../assets/aput.jpg';
 // Enhanced animation variants for the letters
 const letterAnimation = {
     hidden: { opacity: 0, y: 50, textShadow: "0px 0px 0px rgba(255, 165, 0, 0)" },
@@ -40,7 +40,7 @@ const Hero = () => {
                 transition={{ duration: 1 }}
             >
                 <motion.img
-                    src="src/assets/aput.JPG"
+                    src={aput}
                     alt="Faslan Rizni"
                     className="w-32 h-32 rounded-full"
                 />
