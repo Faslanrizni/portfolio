@@ -3,8 +3,11 @@ name: Node.js CI
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+permissions:
+  pages: write      # to deploy to Pages
+  id-token: write
+  contents: read
+
 
 jobs:
   build:
@@ -23,11 +26,17 @@ jobs:
           cache: 'npm'
       - run: npm ci
       - run: npm run build # Use Vite build
-      # - run: npm test
+      - name: upload artifacts
+        uses: actions/upload-pages-artifact@v3
+        with:
+         name: 'github-pages'
+         path: build
 
-      - name: Deploy with gh-pages
-        run: |
-          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-          npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          artifacts_name: 'github-pages'
+
+
+
