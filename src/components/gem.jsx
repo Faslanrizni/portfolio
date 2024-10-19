@@ -1,5 +1,7 @@
 import React from 'react';
 import { FaInstagram, FaEnvelope } from 'react-icons/fa';
+import Gem from '../assets/gem1.jpg';
+import mail from '../assets/mail.jpg';
 
 const GemInterestComponent = () => {
     return (
@@ -16,7 +18,7 @@ const GemInterestComponent = () => {
                 <div className="flex flex-col md:flex-row items-center justify-center gap-6">
                     <div className="{/*bg-[#151030]*/} shadow-lg rounded-lg p-8 md:w-2/5">
                         <img
-                            src="src/assets/gem1.jpg"  // Replace with your actual image
+                            src={Gem}  // Replace with your actual image
                             alt="Gem Collection"
                             className="rounded-lg mb-4"
                         />
@@ -36,7 +38,7 @@ const GemInterestComponent = () => {
 
                     <div className="{/*bg-[#151030]*/} shadow-lg rounded-lg p-8 md:w-2/5">
                         <img
-                            src="src/assets/mail.jpg"  // Replace with your actual image
+                            src={mail} // Replace with your actual image
                             alt="call me"
                             className="rounded-lg mb-4"
                         />
