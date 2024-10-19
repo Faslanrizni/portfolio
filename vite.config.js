@@ -5,3 +5,5 @@ export default defineConfig({
   plugins: [react()],
   base: '/3d-portfolio/',  // Add this line to set the base URL
 })
+
+

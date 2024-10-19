@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { Hero, Navbar, Works } from "./components";
 import SkillComponent from "./components/SkillComponent.jsx";
@@ -54,14 +54,9 @@ const App = () => {
                     <Section id="skills" Component={Techstack} />
                     <Section id="skills" Component={SkillComponent} />
                     <Section id="about" Component={AboutMe} />
-
                     <Section id="experience" Component={Experience} />
                     <Section id="work" Component={Works} />
                     <Section id="work" Component={gem} />
-
-                    {/*<Section id="skills" Component={Toolstack} />*/}
-
-
                     <Section id="contact" Component={Footer} />
                 </div>
             </div>
