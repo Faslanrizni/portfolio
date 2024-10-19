@@ -14,7 +14,7 @@ const AboutMe = () => {
         teamItemOuter: {
             width: '350px',
             height: '350px',
-            backgroundImage: `url(${aput})`,
+            image: {aput},
             backgroundPosition: 'center',
             backgroundSize: 'cover',
             overflow: 'hidden',
