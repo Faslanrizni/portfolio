@@ -28,7 +28,7 @@ const containerAnimation = {
 
 const Hero = () => {
     const name = "Faslan Rizni".split('');
-    const role = "Software Engineer, AI/ML Enthusiast".split('');
+    const role = "Software Engineer, Cyber Security Enthusiast".split('');
     const welcomeText = "Welcome, seeker. Dive into the world of my portfolio!".split('');
 
     return (

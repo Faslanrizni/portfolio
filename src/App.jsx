@@ -66,7 +66,7 @@ const App = () => {
                     <Section id="about" Component={AboutMe} />
                     <Section id="experience" Component={Experience} />
                     <Section id="work" Component={Works} />
-                    <Section id="gem" Component={gem} />
+                    {/* <Section id="gem" Component={gem} /> */}
                     <Section id="contact" Component={Footer} />
 
                 </div>
