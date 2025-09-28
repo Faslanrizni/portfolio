@@ -1,36 +1,59 @@
 import React, { useEffect, useRef } from 'react';
-import { motion, useInView } from 'framer-motion'; // Import useInView from framer-motion
+import { motion, useInView } from 'framer-motion'; 
 import '../style/style.css';
 
 const experiences = [
+      {
+    company: 'WSO2',
+    role: 'Trainee Security Engineer',
+    duration: 'Jun 2025 – Present',
+    workType: 'Onsite',
+    location: 'Colombo',
+    employmentType: 'Full-time',
+    description: [
+        'Implemented automation for security tasks and developed internal tools to streamline security workflows.',
+        'Built dashboards to visualize security metrics, monitor vulnerabilities, and support security decision-making.',
+        'Performed troubleshooting and incident analysis to enhance system reliability and protection.',
+        'Applied security engineering best practices in backend services and APIs to ensure secure and resilient applications.',
+        'Collaborated with the team in an agile environment, participated in code reviews, and contributed to improving security processes.',
+    ],
+    technologies: ['Appscript', 'Security Automation', 'Dashboard Development', 'Internal Tools',],
+}
+,
+   {
+    company: 'ZeloraTech Pvt LTD',
+    role: 'Trainee Software Engineer',
+    duration: 'Jun 2024 – Jun 2025',
+    workType: 'Remote',
+    location: 'Singapore',
+    employmentType: 'Full-time',
+    description: [
+        'Under the guidance of my team lead, contributed to major modules such as Hiring and Onboarding, developing robust backend services and collaborating with team members to fix bugs and enhance application stability.',
+        'Integrated AWS SES for automated email communication and AWS S3 for file storage and management.',
+        'Extended RomeoHR functionality by developing new API endpoints and refactoring legacy APIs to improve performance and usability.',
+        'Implemented comprehensive error handling strategies across services and wrote optimized PostgreSQL queries for better performance and reliability.',
+        'Integrated various third-party APIs and external services such as LinkedIn, Google Meet, Udemy, and Google Maps to enhance product features and usability.',
+        'Collaborated with the team in an agile environment, participated in code reviews, and contributed to improving code quality and scalable backend development.',
+    ],
+    technologies: ['NestJS', 'NodeJS', 'TypeScript', 'KeyCloak', 'AWS SES', 'AWS S3', 'PostgreSQL', 'Postman', 'Bruno'],
+},
     {
-        company: 'ZeloraTech Pvt LTD',
-        role: 'Trainee Software Engineer',
-        duration: 'Jun 2024 – Present',
-        workType: 'Remote',
-        location: 'Singapore',
-        employmentType: 'Full-time',
-        description: [
-            'Developed and maintained API features for the company main product called RomeoHR using NestJS, NodeJS, TypeScript, KeyCloak.',
-            'Collaborated with a team of developers to deliver new features within deadlines.',
-            'Participated in code reviews and contributed to improving code quality.',
-        ],
-        technologies: ['NestJS', 'NodeJS', 'TypeScript', 'KeyCloak'],
-    },
-    {
-        company: 'Developers Stack Pvt LTD',
-        role: 'Trainee Software Engineer',
-        duration: 'Jun 2023 – Dec 2023',
-        workType: 'High-bride',
-        location: 'Colombo, Sri Lanka',
-        employmentType: 'Part-time',
-        description: [
-            'Developed and maintained API features for the company main product called RomeoHR using Spring boot, Java, Microservices.',
-            'Worked closely with backend developers and designers to implement efficient and scalable systems.',
-            'Handled bug tracking and solved critical issues in production.',
-        ],
-        technologies: ['Spring boot', 'Java', 'Microservices'],
-    },
+    company: 'Developers Stack Pvt LTD',
+    role: 'Trainee Software Engineer',
+    duration: 'Jun 2023 – Dec 2023',
+    workType: 'Hybrid',
+    location: 'Colombo, Sri Lanka',
+    employmentType: 'Part-time',
+    description: [
+        'Developed and maintained web applications and APIs using the MERN stack and Spring Boot, integrating Spring Security for secure authentication and authorization.',
+        'Worked with Microservices architecture, including Eureka Server for service discovery, to build scalable and maintainable systems.',
+        'Collaborated with frontend and backend teams to implement efficient, high-performance features.',
+        'Handled bug tracking, resolved critical production issues, and optimized application performance.',
+        'Explored and applied modern Node.js development practices to enhance backend functionality and reliability.',
+    ],
+    technologies: ['MERN Stack', 'Spring Boot', 'Spring Security', 'Java', 'Microservices', 'Eureka Server', 'Node.js'],
+}
+,
 ];
 
 const educations = [
@@ -39,8 +62,8 @@ const educations = [
         degree: 'Bachelor of Science in Computer Science',
         location: 'Colombo, Sri Lanka',
         description: [
-            'Informatic Institute of Technology affiliated with University of Westminster ',
-            'Relevant coursework: Data Structures, Algorithms, Web Development, Database Systems',
+            'Informatics Institute of Technology affiliated with University of Westminster ',
+            'Relevant coursework: Data Structures, Algorithms, Web Development, Database Systems, Machine Learning , Applied AI , Cyber Security',
             'Third year Undergraduate',
         ],
     },

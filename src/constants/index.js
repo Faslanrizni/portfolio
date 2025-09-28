@@ -77,7 +77,7 @@ const projectsConstants = [
 
   },
   {
-    title: "Machine learning enthusiast",
+    title: "Security Engineer",
 
   },
   {

@@ -57,10 +57,7 @@ const AboutMe = () => {
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.1, duration: 1 }}
                     >
-                        As a dedicated Software Engineer,
-                        I specialize in backend development with a strong focus on technologies like NestJS and PostgreSQL,
-                        while also having hands-on experience with Spring Boot and MERN stack.
-                        My passion extends beyond software development into Machine Learning and Computer Vision, where I continuously explore innovative solutions.
+                        I’m a Computer Science undergraduate who loves coding and securing applications. I enjoy exploring application security (AppSec) and cybersecurity trends, researching vulnerabilities, and learning new techniques to make software safer and more resilient
 
                         Outside of tech, I am deeply committed to helping others, particularly those facing challenges in education. I believe in the power of knowledge and am always eager to assist in making learning accessible. Additionally, I have a strong interest in social work, striving to make a positive impact in my community
                     </motion.p>
