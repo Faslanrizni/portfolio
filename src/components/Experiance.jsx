@@ -6,23 +6,25 @@ const experiences = [
       {
     company: 'WSO2',
     role: 'Trainee Security Engineer',
-    duration: 'Jun 2025 – Present',
+    duration: 'Jun 2025 – July 2026',
     workType: 'Onsite',
     location: 'Colombo',
     employmentType: 'Full-time',
     description: [
-        'Implemented automation for security tasks and developed internal tools to streamline security workflows.',
-        'Built dashboards to visualize security metrics, monitor vulnerabilities, and support security decision-making.',
-        'Performed troubleshooting and incident analysis to enhance system reliability and protection.',
-        'Applied security engineering best practices in backend services and APIs to ensure secure and resilient applications.',
-        'Collaborated with the team in an agile environment, participated in code reviews, and contributed to improving security processes.',
+       "Automated security tasks and workflows, built dashboards and alert monitoring for vulnerability tracking.",
+       "Tested and researched centralized security guardrails for multiple software products to enforce consistent security practices.",
+       "Implemented bug fixes and tested security scanners such as FOSSA, JFrog, Veracode, Trivy, and GoSec into internal workflows and pipelines.",
+       "Developed customizable tools for security automation and vulnerability management.",
+       "Participated in secure code reviews, application security activities, and security advisory reviews.",
+       "Contributed to the development of a centralized security portal for managing security-related workflows.",
+
     ],
-    technologies: ['Appscript', 'Security Automation', 'Dashboard Development', 'Internal Tools',],
+    technologies: ['Appscript', 'Security Automation', 'Dashboard Development', 'Internal Tools','bash script','python'],
 }
 ,
    {
     company: 'ZeloraTech Pvt LTD',
-    role: 'Trainee Software Engineer',
+    role: 'Intern Software Engineer',
     duration: 'Jun 2024 – Jun 2025',
     workType: 'Remote',
     location: 'Singapore',
@@ -36,24 +38,7 @@ const experiences = [
         'Collaborated with the team in an agile environment, participated in code reviews, and contributed to improving code quality and scalable backend development.',
     ],
     technologies: ['NestJS', 'NodeJS', 'TypeScript', 'KeyCloak', 'AWS SES', 'AWS S3', 'PostgreSQL', 'Postman', 'Bruno'],
-},
-    {
-    company: 'Developers Stack Pvt LTD',
-    role: 'Trainee Software Engineer',
-    duration: 'Jun 2023 – Dec 2023',
-    workType: 'Hybrid',
-    location: 'Colombo, Sri Lanka',
-    employmentType: 'Part-time',
-    description: [
-        'Developed and maintained web applications and APIs using the MERN stack and Spring Boot, integrating Spring Security for secure authentication and authorization.',
-        'Worked with Microservices architecture, including Eureka Server for service discovery, to build scalable and maintainable systems.',
-        'Collaborated with frontend and backend teams to implement efficient, high-performance features.',
-        'Handled bug tracking, resolved critical production issues, and optimized application performance.',
-        'Explored and applied modern Node.js development practices to enhance backend functionality and reliability.',
-    ],
-    technologies: ['MERN Stack', 'Spring Boot', 'Spring Security', 'Java', 'Microservices', 'Eureka Server', 'Node.js'],
 }
-,
 ];
 
 const educations = [
