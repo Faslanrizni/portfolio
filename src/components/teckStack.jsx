@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-import { CgCPlusPlus } from "react-icons/cg";
 import {
     DiJavascript1,
     DiReact,
@@ -9,8 +8,20 @@ import {
     DiGit,
     DiJava,
 } from "react-icons/di";
-import { SiFirebase, SiNextdotjs, SiPostgresql } from "react-icons/si";
-import { motion, useInView } from "framer-motion"; // Import useInView
+import {
+    SiFirebase,
+    SiPostgresql,
+    SiMysql,
+    SiTypescript,
+    SiNestjs,
+    SiSpringboot,
+    SiR,
+    SiKalilinux,
+    SiMetasploit,
+    SiWireshark,
+    SiBurpsuite,
+} from "react-icons/si";
+import { motion, useInView } from "framer-motion";
 
 // Add styles for hover and transition effects
 const iconStyle = {
@@ -82,14 +93,31 @@ const Techstack = () => {
             animate={inView ? "visible" : "hidden"} // Animate based on inView state
         >
             <div style={gridContainerStyle}>
+                {/* Full stack development */}
                 <TechIcon icon={<DiJavascript1 />} />
+                <TechIcon icon={<SiTypescript />} />
                 <TechIcon icon={<DiNodejs />} />
+                <TechIcon icon={<SiNestjs />} />
                 <TechIcon icon={<DiReact />} />
-                <TechIcon icon={<DiMongodb />} />
-                <TechIcon icon={<DiGit />} />
-                <TechIcon icon={<SiPostgresql />} />
-                <TechIcon icon={<DiPython />} />
                 <TechIcon icon={<DiJava />} />
+                <TechIcon icon={<SiSpringboot />} />
+                <TechIcon icon={<DiGit />} />
+
+                {/* Machine learning */}
+                <TechIcon icon={<DiPython />} />
+                <TechIcon icon={<SiR />} />
+
+                {/* Cyber security */}
+                <TechIcon icon={<SiKalilinux />} />
+                  <TechIcon icon={<SiMetasploit />} />
+                <TechIcon icon={<SiBurpsuite />} />
+                <TechIcon icon={<SiWireshark />} />
+
+                {/* Databases */}
+                <TechIcon icon={<DiMongodb />} />
+                <TechIcon icon={<SiPostgresql />} />
+                <TechIcon icon={<SiMysql />} />
+                <TechIcon icon={<SiFirebase />} />
             </div>
         </motion.div>
     );

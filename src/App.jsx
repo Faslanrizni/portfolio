@@ -62,7 +62,7 @@ const App = () => {
                 <div>
                     <Section id="projects" Component={Service} />
                     <Section id="skills" Component={Techstack} />
-                    <Section id="contact" Component={SkillComponent} />
+                    {/* <Section id="contact" Component={ContactForm} /> */}
                     <Section id="about" Component={AboutMe} />
                     <Section id="experience" Component={Experience} />
                     <Section id="work" Component={Works} />
