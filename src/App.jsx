@@ -1,6 +1,6 @@
 import { HashRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
-import { Hero, Navbar, Works } from "./components";
+import { Hero, Navbar, Works, Blog } from "./components";
 import SkillComponent from "./components/SkillComponent.jsx";
 import AboutMe from "./components/AboutNew.jsx";
 import Service from "./components/ProjectNew.jsx";
@@ -62,6 +62,7 @@ const App = () => {
                 <div>
                     <Section id="projects" Component={Service} />
                     <Section id="skills" Component={Techstack} />
+                    <Section id="blog" Component={Blog} />
                     {/* <Section id="contact" Component={ContactForm} /> */}
                     <Section id="about" Component={AboutMe} />
                     <Section id="experience" Component={Experience} />
