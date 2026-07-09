@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
+const mediumProfileUrl = 'https://medium.com/@faslan2002rizni';
+
 const posts = [
   {
     title: 'Vulnerability Scanning Metasploitable with Tenable Nessus on Kali Linux',
@@ -65,9 +67,49 @@ const posts = [
       'https://miro.medium.com/v2/resize:fit:1100/format:webp/1*CrrpxIYywbsTasVcFKVyFw.png',
     badge: 'Security',
   },
+        {
+    title: 'A Hands-On Guide to Penetration Testing with Metasploit and EternalBlue',
+    summary:
+    "This guide breaks down the core methodology behind a Metasploit engagement—from database initialization and Nmap reconnaissance to module selection and payload configuration—using the EternalBlue (MS17‑010) exploit as a real‑world case study. It walks through the critical distinction between auxiliary scanners (for vulnerability validation) and exploit modules (for full compromise), while also covering payload encoding with msfvenom and evasion techniques like shikata_ga_nai to reduce AV detection",
+    link: 'https://medium.com/@faslan2002rizni/a-hands-on-guide-to-penetration-testing-with-metasploit-and-eternalblue-45a1dd431688',
+    image:
+      'https://miro.medium.com/v2/resize:fit:640/format:webp/1*rZxXgdadKpTpd6pV-I8-JQ.jpeg',
+    badge: 'Security',
+  },
+  {
+    title: 'Network Packet Analysis & Malware Investigation',
+    summary:
+      "Real malware investigations start with a single anomalous packet. In this hands-on lab, I analyzed PCAP files from malware-traffic-analysis.net using Wireshark and tcpdump on Kali Linux. The goal: trace an obfuscated downloader, extract the malicious payload URL, and map the communication back to a Vietnam‑hosted C2 server – all through HTTP stream analysis and filter‑based packet inspection",
+    link: 'https://medium.com/@faslan2002rizni/network-packet-analysis-malware-investigation-89964dd8722c',
+    image:
+      'https://miro.medium.com/v2/resize:fit:640/format:webp/1*-Kt1m5PoipHKxsQ1nPSuLw.jpeg',
+    badge: 'Security',
+  },
+          {
+    title: 'A Hands-On Guide to Penetration Testing with Metasploit and EternalBlue',
+    summary:
+    "This guide breaks down the core methodology behind a Metasploit engagement—from database initialization and Nmap reconnaissance to module selection and payload configuration—using the EternalBlue (MS17‑010) exploit as a real‑world case study. It walks through the critical distinction between auxiliary scanners (for vulnerability validation) and exploit modules (for full compromise), while also covering payload encoding with msfvenom and evasion techniques like shikata_ga_nai to reduce AV detection",
+    link: 'https://medium.com/@faslan2002rizni/a-hands-on-guide-to-penetration-testing-with-metasploit-and-eternalblue-45a1dd431688',
+    image:
+      'https://miro.medium.com/v2/resize:fit:640/format:webp/1*rZxXgdadKpTpd6pV-I8-JQ.jpeg',
+    badge: 'Security',
+  },
+  {
+    title: 'Bypassing Validation and Achieving Remote Code Execution via SQL Injection ',
+    summary:
+      "SQL injection can be devastating—but it's even more dangerous when it leads to remote code execution. This blog walks through an HTB skills assessment challenge where a simple validation bypass opens the door to full system compromise. From finding the injection point to extracting sensitive data, the entire methodology is broken down step by step.",
+    link: 'https://medium.com/@faslan2002rizni/bypassing-validation-and-achieving-remote-code-execution-via-sql-injection-htb-skills-assessment-91a6a9ef9a5a',
+    image:
+      'https://miro.medium.com/v2/resize:fit:640/format:webp/1*D6kBqnqjLhXy5ztcZTshkA.jpeg',
+    badge: 'Security',
+  },
 ];
 
 const Blog = () => {
+  const [visibleCount, setVisibleCount] = React.useState(6);
+  const visiblePosts = posts.slice(0, visibleCount);
+  const hasMorePosts = visibleCount < posts.length;
+
   return (
     <section className="w-4/5 mx-auto py-20" id="blog">
       <div className="max-w-7xl mx-auto">
@@ -84,7 +126,7 @@ const Blog = () => {
         </div>
 
         <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-          {posts.map((post) => (
+          {visiblePosts.map((post) => (
             <motion.article
               key={post.title}
               initial={{ opacity: 0, y: 20 }}
@@ -118,6 +160,30 @@ const Blog = () => {
             </motion.article>
           ))}
         </div>
+
+        {hasMorePosts && (
+          <div className="mt-10 text-center">
+            <button
+              onClick={() => setVisibleCount((count) => count + 3)}
+              className="rounded-full border border-orange-500 px-6 py-3 text-sm font-semibold text-orange-300 transition hover:bg-orange-600 hover:text-white"
+            >
+              Explore More Blogs
+            </button>
+          </div>
+        )}
+
+        {!hasMorePosts && (
+          <div className="mt-10 text-center">
+            <a
+              href={mediumProfileUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center rounded-full border border-orange-500 px-6 py-3 text-sm font-semibold text-orange-300 transition hover:bg-orange-600 hover:text-white"
+            >
+              View All Blogs on Medium
+            </a>
+          </div>
+        )}
       </div>
     </section>
   );
