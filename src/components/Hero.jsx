@@ -29,7 +29,7 @@ const containerAnimation = {
 const Hero = () => {
     const name = "".split('');
     const role = "Experienced in Developing and Securing Applications".split('');
-    const welcomeText = "Welcome, seeker. Dive into the world of my portfolio!".split('');
+    const welcomeText = "Building secure, modern applications with purpose.".split('');
 
     return (
         <div className="min-h-screen flex flex-col items-center justify-center p-4" id="hero">
@@ -54,7 +54,7 @@ const Hero = () => {
 
             {/* Animate the name with staggered letter animation */}
             <motion.h1
-                className="text-4xl font-bold mb-2 flex flex-wrap justify-center"
+                className="hidden lg:flex text-4xl font-bold mb-2 flex-wrap justify-center"
                 variants={containerAnimation}
                 initial="hidden"
                 animate="visible"
@@ -70,7 +70,7 @@ const Hero = () => {
                 ))}
             </motion.h1>
             <motion.h1
-                className="text-4xl font-bold mb-2 flex flex-wrap justify-center"
+                className="hidden lg:flex text-4xl font-bold mb-2 flex-wrap justify-center"
                 variants={containerAnimation}
                 initial="hidden"
                 animate="visible"
@@ -88,7 +88,7 @@ const Hero = () => {
 
             {/* Animate the welcome text with staggered letter animation */}
             <motion.p
-                className="text-xl mb-8 flex flex-wrap justify-center"
+                className="hidden lg:flex text-xl mb-8 flex-wrap justify-center"
                 variants={containerAnimation}
                 initial="hidden"
                 animate="visible"
