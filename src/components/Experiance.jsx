@@ -56,52 +56,53 @@ const educations = [
 
 const ExperienceEducationComponent = () => {
     const ref = useRef(null);
-    const inView = useInView(ref, { once: true }); // Trigger only once when in view
+    const inView = useInView(ref, { once: true });
 
     const renderCards = (items, type) => (
         <ul className="space-y-8">
             {items.map((item, index) => (
                 <motion.li
                     key={index}
-                    className="animate-card opacity-0 transform translate-y-12 transition-all duration-700  p-[1px] rounded-[20px] shadow-lg hover:shadow-xl border-gradient"
-                    initial={{ opacity: 0, translateY: 50 }} // Initial state for animation
-                    animate={inView ? { opacity: 1, translateY: 0 } : { opacity: 0, translateY: 50 }} // Animate based on inView
-                    transition={{ duration: 0.5, delay: index * 0.1 }} // Delay for staggered effect
+                    className="rounded-[24px] border border-[#30363D] bg-[#161B22]/90 p-[1px] shadow-[0_0_30px_rgba(0,194,255,0.08)]"
+                    initial={{ opacity: 0, translateY: 50 }}
+                    animate={inView ? { opacity: 1, translateY: 0 } : { opacity: 0, translateY: 50 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
-                    <div className="bg-[#1f1b3d] p-6 rounded-[20px]">
-                        <h2 className="text-xl font-bold mb-2">
+                    <div className="rounded-[24px] bg-[#0D1117] p-6">
+                        <div className="mb-3 flex items-center justify-between gap-3">
+                            <span className="rounded-full border border-[#00FF9C]/30 bg-[#00FF9C]/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.25em] text-[#00FF9C]">
+                                {type === 'experience' ? 'Experience' : 'Education'}
+                            </span>
+                            <span className="text-sm text-[#8B949E]">{item.duration}</span>
+                        </div>
+                        <h2 className="mb-2 text-xl font-semibold text-[#E6EDF3]">
                             {type === 'experience' ? (
                                 <>
-                                    {item.role} <span className="text-yellow-400">@ {item.company}</span>
+                                    {item.role} <span className="text-[#00C2FF]">@ {item.company}</span>
                                 </>
                             ) : (
                                 <>
-                                    {item.degree} <span className="text-yellow-400">@ {item.institution}</span>
+                                    {item.degree} <span className="text-[#00C2FF]">@ {item.institution}</span>
                                 </>
                             )}
                         </h2>
-                        <p className="text-gray-400 mb-2 italic text-sm">{item.duration}</p>
-                        <p className="text-gray-400 mb-2 text-sm">
-                            <span className="font-semibold">Location:</span> {item.location}
+                        <p className="mb-3 text-sm text-[#8B949E]">
+                            <span className="font-semibold text-[#E6EDF3]">Location:</span> {item.location}
                         </p>
                         {type === 'experience' && (
-                            <>
-                                <p className="text-gray-400 mb-2 text-sm">
-                                    <span className="font-semibold">Work Type:</span> {item.workType}
-                                </p>
-                                <p className="text-gray-400 mb-2 text-sm">
-                                    <span className="font-semibold">Employment Type:</span> {item.employmentType}
-                                </p>
-                            </>
+                            <div className="mb-3 flex flex-wrap gap-2 text-sm text-[#8B949E]">
+                                <span className="rounded-full bg-[#1C2128] px-3 py-1">{item.workType}</span>
+                                <span className="rounded-full bg-[#1C2128] px-3 py-1">{item.employmentType}</span>
+                            </div>
                         )}
-                        <ul className="list-disc list-inside mb-2 space-y-1 text-sm">
+                        <ul className="mb-4 list-disc space-y-2 pl-5 text-sm leading-6 text-[#8B949E]">
                             {item.description.map((desc, i) => (
                                 <li key={i}>{desc}</li>
                             ))}
                         </ul>
                         {type === 'experience' && (
-                            <p className="text-xs text-gray-300">
-                                <span className="font-semibold">Technologies:</span> {item.technologies.join(', ')}
+                            <p className="text-xs leading-6 text-[#8B949E]">
+                                <span className="font-semibold text-[#E6EDF3]">Technologies:</span> {item.technologies.join(', ')}
                             </p>
                         )}
                     </div>
@@ -111,15 +112,16 @@ const ExperienceEducationComponent = () => {
     );
 
     return (
-        <div className="aboutMe w-4/5 mx-auto pt-20 pb-12 text-white w-full max-w-7xl mx-auto my-12 p-8 rounded-lg" id="about">
-            {/*<h1 className="text-center text-3xl mb-8 font-bold">About me</h1>*/}
-            <div className="flex flex-col md:flex-row gap-8" ref={ref}>
+        <div className="mx-auto my-12 w-4/5 max-w-7xl rounded-[28px] border border-[#30363D] bg-[#161B22]/70 p-8 pt-20 pb-12 text-white shadow-[0_0_40px_rgba(0,194,255,0.08)]" id="about">
+            <div className="mb-10 text-center">
+                <p className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-[#00FF9C]">Profile</p>
+                <h2 className="text-3xl font-semibold text-[#E6EDF3]">Experience & Education</h2>
+            </div>
+            <div className="flex flex-col gap-8 md:flex-row" ref={ref}>
                 <section id="experience" className="w-full md:w-1/2">
-                    <h2 className="text-center text-2xl mb-6 font-semibold">Experience</h2>
                     {renderCards(experiences, 'experience')}
                 </section>
                 <section id="education" className="w-full md:w-1/2">
-                    <h2 className="text-center text-2xl mb-6 font-semibold">Education</h2>
                     {renderCards(educations, 'education')}
                 </section>
             </div>

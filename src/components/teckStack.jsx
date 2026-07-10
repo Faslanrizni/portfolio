@@ -23,43 +23,38 @@ import {
 } from "react-icons/si";
 import { motion, useInView } from "framer-motion";
 
-// Add styles for hover and transition effects
 const iconStyle = {
-    fontSize: "2.5rem", // Default icon size
-    color: "#fff",
+    fontSize: "2.5rem",
+    color: "#E6EDF3",
     transition: "transform 0.3s ease, color 0.3s ease",
 };
 
 const containerStyle = {
     padding: "2rem",
-    borderRadius: "10px",
-    boxShadow: "0 0 20px rgba(255, 255, 255, 0.1)",
+    borderRadius: "24px",
+    boxShadow: "0 0 30px rgba(0, 194, 255, 0.08)",
 };
 
 const gridContainerStyle = {
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))", // Automatically adjust number of columns
-    gap: "30px",
+    gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))",
+    gap: "24px",
     justifyContent: "center",
 };
 
 const cardStyle = {
-    border: "1px solid rgba(255, 0, 255, 0.5)", // Purple border
-    borderRadius: "10px",
+    border: "1px solid rgba(48, 54, 61, 0.9)",
+    borderRadius: "16px",
     padding: "1.5rem",
     textAlign: "center",
-    transition: "transform 0.3s ease, box-shadow 0.3s ease",
+    background: "rgba(22, 27, 34, 0.9)",
+    transition: "transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease",
 };
 
 const cardHoverStyle = {
-    transform: "scale(1.05)", // Scaling effect on hover
-    boxShadow: "0 0 15px rgba(255, 0, 255, 0.7)", // Glow effect
-};
-
-const headerStyle = {
-    color: "#d987ff",
-    fontSize: "2.5rem",
-    fontWeight: "bold",
+    transform: "translateY(-4px)",
+    boxShadow: "0 0 20px rgba(0, 255, 156, 0.16)",
+    borderColor: "rgba(0, 255, 156, 0.4)",
 };
 
 // Framer Motion variants for the staggered effect
@@ -86,12 +81,16 @@ const Techstack = () => {
         <motion.div
             ref={ref}
             style={containerStyle}
-            className="techstack-section"
+            className="techstack-section rounded-[28px] border border-[#30363D] bg-[#161B22]/70 p-6 shadow-[0_0_40px_rgba(0,194,255,0.08)]"
             id={"skills"}
             variants={containerVariants}
             initial="hidden"
-            animate={inView ? "visible" : "hidden"} // Animate based on inView state
+            animate={inView ? "visible" : "hidden"}
         >
+            <div className="mb-8 text-center">
+                <p className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-[#00FF9C]">Stack</p>
+                <h2 className="text-3xl font-semibold text-[#E6EDF3]">Security & Engineering Toolkit</h2>
+            </div>
             <div style={gridContainerStyle}>
                 {/* Full stack development */}
                 <TechIcon icon={<DiJavascript1 />} />

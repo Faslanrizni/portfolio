@@ -52,14 +52,14 @@ const AboutMe = () => {
 
 
                     <motion.p
-                        className="mt-4 text-secondary text-sm leading-6 text-gray-300"
+                        className="mt-4 text-secondary text-sm leading-7 text-gray-300"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.1, duration: 1 }}
                     >
-                        I’m a Computer Science undergraduate who loves coding and securing applications. I enjoy exploring application security (AppSec) and cybersecurity trends, researching vulnerabilities, and learning new techniques to make software safer and more resilient
+                        I’m a Computer Science undergraduate focused on building resilient systems and understanding how applications can be secured from the ground up. My work sits at the intersection of software development, application security, and defensive engineering, where I explore vulnerabilities, secure coding practices, and the mindset behind modern cyber defense.
 
-                        Outside of tech, I am deeply committed to helping others, particularly those facing challenges in education. I believe in the power of knowledge and am always eager to assist in making learning accessible. Additionally, I have a strong interest in social work, striving to make a positive impact in my community
+                        Beyond the terminal and code, I care deeply about helping others—especially those navigating education and limited opportunities. I believe knowledge should be accessible, and I’m always looking for ways to create impact through both technology and community support.
                     </motion.p>
 
                     {/* Social Icons */}

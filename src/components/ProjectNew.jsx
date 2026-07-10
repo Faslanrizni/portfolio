@@ -23,13 +23,13 @@ const ServiceCard = ({index, title}) =>{
                         speed:450
 
                     }}
-                    className={'bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'}
+                    className={'bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col border border-orange-500/20 shadow-[0_0_20px_rgba(255,123,0,0.12)] hover:shadow-[0_0_30px_rgba(255,123,0,0.25)] transition-all'}
 
                 >
                     {/*<img src={icon} alt="icon"*/}
                     {/*     className={'w-16 h-16 object-contain'}*/}
                     {/*/>*/}
-                    <h3 className={'text-white text-[20px] font-bold text-center'}>{title}</h3>
+                    <h3 className={'text-white text-[20px] font-bold text-center tracking-wide'}>{title}</h3>
                 </div>
 
             </motion.div>
@@ -42,7 +42,7 @@ const About = () => {
     return (
         <>
 
-            <div className={'flex flex-wrap gap-10'} id={'projects'}>
+            <div className={'flex flex-wrap gap-10 justify-center'} id={'projects'}>
                 {projectsConstants.map((service,index)=>(
                     <ServiceCard key={service.title} index={index} {...service} />
                 ))}

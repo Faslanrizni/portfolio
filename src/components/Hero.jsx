@@ -27,14 +27,16 @@ const containerAnimation = {
 };
 
 const Hero = () => {
-    const name = "".split('');
-    const role = "Experienced in Developing and Securing Applications".split('');
-    const welcomeText = "Building secure, modern applications with purpose.".split('');
+    const name = "Faslan Rizni".split('');
+    const role = "Security Engineer | Software Developer".split('');
+    const welcomeText = "Defending systems, building resilient tools".split('');
+    const welcomeTextSecond = "exploring the edge of modern security.".split('');
 
     return (
-        <div className="min-h-screen flex flex-col items-center justify-center p-4" id="hero">
+        <div className="min-h-screen flex flex-col items-center justify-center p-4 relative overflow-hidden" id="hero">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,123,0,0.15),_transparent_45%)]" />
             <motion.div
-                className="relative mb-4"
+                className="relative mb-4 z-10"
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 1 }}
@@ -54,7 +56,7 @@ const Hero = () => {
 
             {/* Animate the name with staggered letter animation */}
             <motion.h1
-                className="hidden lg:flex text-4xl font-bold mb-2 flex-wrap justify-center"
+                className="hidden lg:flex text-4xl font-bold mb-2 flex-wrap justify-center text-orange-300 tracking-[0.2em] uppercase"
                 variants={containerAnimation}
                 initial="hidden"
                 animate="visible"
@@ -70,7 +72,7 @@ const Hero = () => {
                 ))}
             </motion.h1>
             <motion.h1
-                className="hidden lg:flex text-4xl font-bold mb-2 flex-wrap justify-center"
+                className="hidden lg:flex text-4xl font-bold mb-2 flex-wrap justify-center text-white"
                 variants={containerAnimation}
                 initial="hidden"
                 animate="visible"
@@ -88,7 +90,7 @@ const Hero = () => {
 
             {/* Animate the welcome text with staggered letter animation */}
             <motion.p
-                className="hidden lg:flex text-xl mb-8 flex-wrap justify-center"
+                className="hidden lg:flex text-xl mb-2 flex-wrap justify-center text-gray-300 max-w-2xl text-center"
                 variants={containerAnimation}
                 initial="hidden"
                 animate="visible"
@@ -103,11 +105,27 @@ const Hero = () => {
                     </motion.span>
                 ))}
             </motion.p>
+            <motion.p
+                className="hidden lg:flex text-xl mb-8 flex-wrap justify-center text-gray-300 max-w-2xl text-center"
+                variants={containerAnimation}
+                initial="hidden"
+                animate="visible"
+            >
+                {welcomeTextSecond.map((letter, index) => (
+                    <motion.span
+                        key={index}
+                        variants={letterAnimation}
+                        className="inline-block mx-[0.5px]"
+                    >
+                        {letter === ' ' ? '\u00A0' : letter}
+                    </motion.span>
+                ))}
+            </motion.p>
 
-            <div className="flex space-x-4">
+            <div className="flex flex-wrap justify-center gap-3 z-10">
                 <a href="#work">
                     <motion.button
-                        className="px-4 py-2 bg-[#1f1b3d] text-white rounded hover:bg-orange-700 transition-colors"
+                        className="px-4 py-2 bg-[#1f1b3d] border border-orange-500/40 text-white rounded hover:bg-orange-700 transition-colors shadow-[0_0_20px_rgba(255,123,0,0.15)]"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 4, duration: 0.5 }}
@@ -117,7 +135,7 @@ const Hero = () => {
                 </a>
                 <a href="#projects">
                     <motion.button
-                        className="px-4 py-2 bg-[#1f1b3d] text-white rounded hover:bg-orange-700 transition-colors"
+                        className="px-4 py-2 bg-[#1f1b3d] border border-orange-500/40 text-white rounded hover:bg-orange-700 transition-colors shadow-[0_0_20px_rgba(255,123,0,0.15)]"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 4.2, duration: 0.5 }}
@@ -127,7 +145,7 @@ const Hero = () => {
                 </a>
                 <a href="#projects">
                     <motion.button
-                        className="px-4 py-2 bg-[#1f1b3d] text-white rounded hover:bg-orange-700 transition-colors"
+                        className="px-4 py-2 bg-[#1f1b3d] border border-orange-500/40 text-white rounded hover:bg-orange-700 transition-colors shadow-[0_0_20px_rgba(255,123,0,0.15)]"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 4.4, duration: 0.5 }}

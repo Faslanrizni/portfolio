@@ -115,13 +115,13 @@ const Blog = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-10">
           <p className="text-orange-400 uppercase tracking-[0.25em] text-sm font-semibold mb-3">
-            Blog
+            Threat Intel / Notes / Labs
           </p>
           <h2 className="text-white text-3xl md:text-4xl font-bold">
-            My latest Medium posts
+            Security write-ups/Labs and technical notes
           </h2>
           <p className="text-gray-300 mt-4 max-w-2xl mx-auto">
-            I share practical ideas on software engineering, cybersecurity, and building reliable applications.
+            A collection of hands-on security research, vulnerability breakdowns, and practical lessons from real-world labs.
           </p>
         </div>
 
@@ -133,7 +133,7 @@ const Blog = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.5 }}
-              className="overflow-hidden rounded-2xl border border-[#2d2b4f] bg-[#1f1b3d] shadow-lg"
+              className="overflow-hidden rounded-2xl border border-orange-500/20 bg-[#1f1b3d] shadow-[0_0_25px_rgba(255,123,0,0.12)]"
             >
               <img
                 src={post.image}
@@ -165,7 +165,7 @@ const Blog = () => {
           <div className="mt-10 text-center">
             <button
               onClick={() => setVisibleCount((count) => count + 3)}
-              className="rounded-full border border-orange-500 px-6 py-3 text-sm font-semibold text-orange-300 transition hover:bg-orange-600 hover:text-white"
+              className="rounded-full border border-orange-500 px-6 py-3 text-sm font-semibold text-orange-300 transition hover:bg-orange-600 hover:text-white shadow-[0_0_20px_rgba(255,123,0,0.12)]"
             >
               Explore More Blogs
             </button>
@@ -178,7 +178,7 @@ const Blog = () => {
               href={mediumProfileUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center rounded-full border border-orange-500 px-6 py-3 text-sm font-semibold text-orange-300 transition hover:bg-orange-600 hover:text-white"
+              className="inline-flex items-center rounded-full border border-orange-500 px-6 py-3 text-sm font-semibold text-orange-300 transition hover:bg-orange-600 hover:text-white shadow-[0_0_20px_rgba(255,123,0,0.12)]"
             >
               View All Blogs on Medium
             </a>

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -8,9 +8,22 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
   color-scheme: dark;
+}
+
+body {
+  font-family: "JetBrains Mono", monospace;
+  background: radial-gradient(circle at top, rgba(255, 123, 0, 0.08), transparent 30%), #050816;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, a, button, li, label, input, textarea, code, pre {
+  font-family: "JetBrains Mono", monospace;
+}
+
+::selection {
+  background: rgba(255, 123, 0, 0.35);
+  color: #fff;
 }
 
 /*.hash-span {
