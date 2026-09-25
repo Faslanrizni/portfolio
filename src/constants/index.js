@@ -4,6 +4,8 @@ import hospiatl from '../assets/hospitalN.jpg';
 import Englsih from '../assets/English.jpg';
 import Estate from '../assets/estate.jpg';
 import blog from '../assets/blog.jpg';
+import securityguardrails from '../assets/securityguardrails.png';
+
 export const navLinks = [
   {
     id: "about",
@@ -61,11 +63,11 @@ export const navLinks = [
     backgroundImage: Estate
   },
   {
-    title: "Blog page",
-    description: "Web application",
+    title: "Security Guardrails",
+    description: "DevSecOps security automation framework",
     githubLink: "https://github.com/Faslanrizni/blog-page-client",
-    iconClass: "fa fa-graduation-cap",
-    backgroundImage: blog
+    iconClass: "fa fa-shield-alt",
+    backgroundImage: securityguardrails
   }
 ];
 
@@ -73,19 +75,19 @@ export const navLinks = [
 
 const projectsConstants = [
   {
-    title: "Web Developer",
-
-  },
-  {
-    title: "Backend Developer",
-
-  },
-  {
     title: "Security Engineer",
 
   },
   {
-    title: "Content Creator",
+    title: "Security Researcher",
+
+  },
+  {
+    title: "Junior Penetration Tester",
+
+  },
+  {
+    title: "Backend Engineer ",
 
   },
 ];
