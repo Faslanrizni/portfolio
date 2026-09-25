@@ -23,7 +23,7 @@ const AboutMe = () => {
                         <div className="top-element elementAboutMe">
                             <div className="data-wrapper">
                                 <h3 className="text-white-100 text-xl font-semibold ">Faslan Rizni</h3>
-                                <h4 className="text-white text-lg font-medium">Computer Science Undergraduate</h4>
+                                <h4 className="text-white text-lg font-medium">Security Engineer</h4>
                                 <div className="w-full h-16 flex items-center justify-center">
                                     <ul className="flex list-none m-0 p-0">
                                         <li className="mr-4 text-white">
@@ -48,18 +48,16 @@ const AboutMe = () => {
                         <div className="bottom-element elementAboutMe"></div>
                     </div>
                 </div>
-                <div className="md:w-2/3 p-6">
-
-
+                <div className="md:w-2/3 p-6 flex flex-col justify-center">
                     <motion.p
-                        className="mt-4 text-secondary text-sm leading-7 text-gray-300"
+                        className="mt-4 text-secondary text-sm leading-7 text-gray-300 text-left align-middle"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.1, duration: 1 }}
                     >
-                        I’m a Computer Science undergraduate focused on building resilient systems and understanding how applications can be secured from the ground up. My work sits at the intersection of software development, application security, and defensive engineering, where I explore vulnerabilities, secure coding practices, and the mindset behind modern cyber defense.
+                        I’m a Security Engineer focused on Application Security, security automation, and building resilient software systems. My experience includes vulnerability management, security guardrails, secure code reviews, security tooling, and integrating security scanners into development workflows.
 
-                        Beyond the terminal and code, I care deeply about helping others—especially those navigating education and limited opportunities. I believe knowledge should be accessible, and I’m always looking for ways to create impact through both technology and community support.
+I enjoy researching vulnerabilities, exploring real-world attack techniques, and building practical defenses that help developers create more secure software. I’m particularly interested in Application Security, Product Security, DevSecOps, and cybersecurity research
                     </motion.p>
 
                     {/* Social Icons */}

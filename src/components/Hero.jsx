@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import aput from '../assets/aput.jpg';
+import faslanCv from '../assets/Faslan_CV.pdf';
 // Enhanced animation variants for the letters
 const letterAnimation = {
     hidden: { opacity: 0, y: 50, textShadow: "0px 0px 0px rgba(255, 165, 0, 0)" },
@@ -28,7 +29,7 @@ const containerAnimation = {
 
 const Hero = () => {
     const name = "Faslan Rizni".split('');
-    const role = "Security Engineer | Software Developer".split('');
+    const role = "Security Engineer | Backend Engineer".split('');
     const welcomeText = "Defending systems, building resilient tools".split('');
     const welcomeTextSecond = "exploring the edge of modern security.".split('');
 
@@ -123,6 +124,16 @@ const Hero = () => {
             </motion.p>
 
             <div className="flex flex-wrap justify-center gap-3 z-10">
+                <a href="#blog">
+                    <motion.button
+                        className="px-4 py-2 bg-[#1f1b3d] border border-orange-500/40 text-white rounded hover:bg-orange-700 transition-colors shadow-[0_0_20px_rgba(255,123,0,0.15)]"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 4, duration: 0.5 }}
+                    >
+                        Security Labs & Research
+                    </motion.button>
+                </a>
                 <a href="#work">
                     <motion.button
                         className="px-4 py-2 bg-[#1f1b3d] border border-orange-500/40 text-white rounded hover:bg-orange-700 transition-colors shadow-[0_0_20px_rgba(255,123,0,0.15)]"
@@ -143,7 +154,7 @@ const Hero = () => {
                         Services
                     </motion.button>
                 </a>
-                <a href="#projects">
+                <a href={faslanCv} download="Faslan_CV.pdf" target="_blank" rel="noopener noreferrer">
                     <motion.button
                         className="px-4 py-2 bg-[#1f1b3d] border border-orange-500/40 text-white rounded hover:bg-orange-700 transition-colors shadow-[0_0_20px_rgba(255,123,0,0.15)]"
                         initial={{ opacity: 0, y: 20 }}
