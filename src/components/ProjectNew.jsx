@@ -1,4 +1,4 @@
-
+﻿
 // import Tilt from 'react-tilt';
 import { motion } from 'framer-motion';
 import { styles } from '../styles';
@@ -11,7 +11,7 @@ import SectionWrapper from "../hoc/SectionWrapper.jsx";
 
 const ServiceCard = ({index, title}) =>{
     return (
-        <Tilt className={'xs:w-[250px] w-full'}>{title}
+        <Tilt className={'xs:w-[250px] w-full'}>
             <motion.div
                 variants={fadeIn('right','spring',0.5*index, 0.75)}
                 className={'w-full orange-gold-gradient p-[1px] rounded-[20px] shadow-card'}
@@ -41,7 +41,10 @@ const About = () => {
 
     return (
         <>
-
+            <div className="mb-10 text-center text-white">
+                <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-orange-400">Core disciplines</p>
+                <h2 className="text-3xl font-bold sm:text-4xl">Security Focus</h2>
+            </div>
             <div className={'flex flex-wrap gap-10 justify-center'} id={'projects'}>
                 {projectsConstants.map((service,index)=>(
                     <ServiceCard key={service.title} index={index} {...service} />

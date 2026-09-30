@@ -89,7 +89,7 @@ const ExperienceEducationComponent = () => {
         <div className="mx-auto my-12 w-4/5 max-w-7xl rounded-[28px] border border-[#30363D] bg-[#161B22]/70 p-6 pt-12 text-white shadow-[0_0_40px_rgba(0,194,255,0.08)] sm:p-8 lg:p-10" id="experience">
             <div className="mb-10">
                 <p className="mb-3 text-sm font-semibold uppercase tracking-[0.35em] text-[#00FF9C]"></p>
-                <h2 className="text-3xl font-semibold text-[#E6EDF3] sm:text-4xl">The Story So Far</h2>
+                <h2 className="text-3xl font-semibold text-[#E6EDF3] sm:text-4xl">Security & Engineering Experience</h2>
             </div>
 
             <div ref={ref} className="space-y-8">

@@ -118,7 +118,7 @@ const Blog = () => {
             Threat Intel / Notes / Labs
           </p>
           <h2 className="text-white text-3xl md:text-4xl font-bold">
-            Security write-ups/Labs and technical notes
+            Security Research & Labs
           </h2>
           <p className="text-gray-300 mt-4 max-w-2xl mx-auto">
             A collection of hands-on security research, vulnerability breakdowns, and practical lessons from real-world labs.

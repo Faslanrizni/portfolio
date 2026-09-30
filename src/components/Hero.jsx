@@ -141,7 +141,7 @@ const Hero = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 4, duration: 0.5 }}
                     >
-                        Projects
+                        Selected Projects
                     </motion.button>
                 </a>
                 <a href="#projects">
@@ -151,7 +151,7 @@ const Hero = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 4.2, duration: 0.5 }}
                     >
-                        Services
+                        Security Focus
                     </motion.button>
                 </a>
                 <a href={faslanCv} download="Faslan_CV.pdf" target="_blank" rel="noopener noreferrer">

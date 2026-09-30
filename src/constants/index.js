@@ -35,39 +35,44 @@ export const navLinks = [
 
  export const projects = [
   {
+    title: "Security Guardrails",
+    description: "DevSecOps security automation framework",
+    githubLink: "https://github.com/Faslanrizni/blog-page-client",
+    iconClass: "fa fa-shield-alt",
+    backgroundImage: securityguardrails,
+    category: "Security",
+  },
+  {
     title: "Order-Management-system API",
     description: "Spring boot application - Microservice",
     githubLink: "https://github.com/Faslanrizni/Order-Management-system",
     iconClass: "fa fa-user-circle",
-    backgroundImage: order
+    backgroundImage: order,
+    category: "Backend",
   },
   {
     title: "Hospital Management API",
     description: "Spring boot application",
     githubLink: "https://github.com/Faslanrizni/SpringBootProject",
     iconClass: "fa fa-university",
-    backgroundImage: hospiatl
+    backgroundImage: hospiatl,
+    category: "Backend",
   },
   {
     title: "English Learning platform",
     description: "Web application",
     githubLink: "https://github.com/huzaifaAmeer02",
     iconClass: "fa fa-video-camera",
-    backgroundImage: Englsih
+    backgroundImage: Englsih,
+    category: "Product",
   },
   {
     title: "Real Estate Management System",
     description: "Web application",
     githubLink: "https://github.com/Faslanrizni/react_realEstateWeb",
     iconClass: "fa fa-video-camera",
-    backgroundImage: Estate
-  },
-  {
-    title: "Security Guardrails",
-    description: "DevSecOps security automation framework",
-    githubLink: "https://github.com/Faslanrizni/blog-page-client",
-    iconClass: "fa fa-shield-alt",
-    backgroundImage: securityguardrails
+    backgroundImage: Estate,
+    category: "Product",
   }
 ];
 
@@ -75,19 +80,19 @@ export const navLinks = [
 
 const projectsConstants = [
   {
-    title: "Security Engineer",
+    title: "Application Security",
 
   },
   {
-    title: "Security Researcher",
+    title: "Security Automation",
 
   },
   {
-    title: "Junior Penetration Tester",
+    title: "Security Research",
 
   },
   {
-    title: "Backend Engineer ",
+    title: "Backend Engineering",
 
   },
 ];

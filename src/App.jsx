@@ -60,12 +60,12 @@ const App = () => {
                     <Hero />
                 </div>
                 <div>
+                    <Section id="experience" Component={Experience} />
+                    <Section id="blog" Component={Blog} />
                     <Section id="projects" Component={Service} />
                     <Section id="skills" Component={Techstack} />
-                    <Section id="blog" Component={Blog} />
                     {/* <Section id="contact" Component={ContactForm} /> */}
                     <Section id="about" Component={AboutMe} />
-                    <Section id="experience" Component={Experience} />
                     <Section id="work" Component={Works} />
                     {/* <Section id="gem" Component={gem} /> */}
                     <Section id="contact" Component={Footer} />
