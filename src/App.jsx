@@ -28,7 +28,9 @@ const ScrollToElement = () => {
                     scrollPosition >= section.offsetTop &&
                     scrollPosition < section.offsetTop + section.offsetHeight
                 ) {
-                    history.replaceState(null, null, `#${section.id}`);
+                    const url = new URL(window.location.href);
+                    url.hash = section.id;
+                    history.replaceState(null, null, url);
                 }
             });
         };

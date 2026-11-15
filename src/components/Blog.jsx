@@ -105,10 +105,58 @@ const posts = [
   },
 ];
 
+const cloudPosts = [
+  {
+    title: 'Google Cloud Compute Engine VM Automation, Cost Optimization, and Monitoring',
+    summary:
+      'A practical guide to automating Compute Engine virtual machines while managing costs and monitoring cloud resources.',
+    link: 'https://medium.com/@faslan2002rizni/google-cloud-compute-engine-vm-automation-cost-optimization-and-monitoring-practical-guide-50d4c5339a2c',
+    image:'https://miro.medium.com/v2/resize:fit:1100/format:webp/1*1R1yyOW9CRIhJPrP8ZiT8w.png',
+    badge: 'Google Cloud',
+  },
+  {
+    title: 'Getting Started with Google Cloud Compute Engine',
+    summary:
+      'An introduction to Google Cloud basics, including regions, virtual machines, and IP addresses.',
+
+    link: 'https://medium.com/@faslan2002rizni/getting-started-with-google-cloud-compute-engine-cloud-basics-regions-vms-and-ip-addresses-4b1edb0a0a1f',
+    image:'https://miro.medium.com/v2/resize:fit:640/format:webp/1*RG9HJ9OkaT4MPKLsVAsOQQ.jpeg',
+    badge: 'Google Cloud',
+  },
+];
+
 const Blog = () => {
+  const [activeTab, setActiveTab] = React.useState(() =>
+    new URLSearchParams(window.location.search).get('labs') === 'cloud'
+      ? 'cloud'
+      : 'security',
+  );
   const [visibleCount, setVisibleCount] = React.useState(6);
-  const visiblePosts = posts.slice(0, visibleCount);
-  const hasMorePosts = visibleCount < posts.length;
+  const visiblePosts =
+    activeTab === 'cloud' ? cloudPosts : posts.slice(0, visibleCount);
+  const hasMorePosts = activeTab === 'security' && visibleCount < posts.length;
+
+  React.useEffect(() => {
+    const selectTabFromUrl = () => {
+      const tab = new URLSearchParams(window.location.search).get('labs');
+      setActiveTab(tab === 'cloud' ? 'cloud' : 'security');
+    };
+
+    const tab = new URLSearchParams(window.location.search).get('labs');
+    if (tab === 'cloud' || tab === 'security') {
+      document.getElementById('blog')?.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    window.addEventListener('popstate', selectTabFromUrl);
+    return () => window.removeEventListener('popstate', selectTabFromUrl);
+  }, []);
+
+  const selectTab = (tab) => {
+    setActiveTab(tab);
+    const url = new URL(window.location.href);
+    url.searchParams.set('labs', tab);
+    window.history.pushState({}, '', url);
+  };
 
   return (
     <section className="w-4/5 mx-auto py-20" id="blog">
@@ -125,21 +173,65 @@ const Blog = () => {
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-          {visiblePosts.map((post) => (
+        <div
+          className="mb-10 flex flex-wrap justify-center gap-3"
+          role="tablist"
+          aria-label="Research and labs categories"
+        >
+          <button
+            id="security-labs-tab"
+            type="button"
+            role="tab"
+            aria-selected={activeTab === 'security'}
+            aria-controls="research-labs-panel"
+            onClick={() => selectTab('security')}
+            className={`rounded-full border px-6 py-3 text-sm font-semibold transition ${
+              activeTab === 'security'
+                ? 'border-orange-500 bg-orange-600 text-white'
+                : 'border-orange-500/40 text-orange-300 hover:bg-orange-600/20'
+            }`}
+          >
+            Security Labs
+          </button>
+          <button
+            id="cloud-labs-tab"
+            type="button"
+            role="tab"
+            aria-selected={activeTab === 'cloud'}
+            aria-controls="research-labs-panel"
+            onClick={() => selectTab('cloud')}
+            className={`rounded-full border px-6 py-3 text-sm font-semibold transition ${
+              activeTab === 'cloud'
+                ? 'border-orange-500 bg-orange-600 text-white'
+                : 'border-orange-500/40 text-orange-300 hover:bg-orange-600/20'
+            }`}
+          >
+            Cloud Labs
+          </button>
+        </div>
+
+        <div
+          id="research-labs-panel"
+          role="tabpanel"
+          aria-labelledby={activeTab === 'cloud' ? 'cloud-labs-tab' : 'security-labs-tab'}
+          className="grid gap-8 md:grid-cols-2 xl:grid-cols-3"
+        >
+          {visiblePosts.map((post, index) => (
             <motion.article
-              key={post.title}
+              key={`${post.title}-${index}`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.5 }}
               className="overflow-hidden rounded-2xl border border-orange-500/20 bg-[#1f1b3d] shadow-[0_0_25px_rgba(255,123,0,0.12)]"
             >
-              <img
-                src={post.image}
-                alt={post.title}
-                className="h-48 w-full object-cover"
-              />
+              {post.image && (
+                <img
+                  src={post.image}
+                  alt={post.title}
+                  className="h-48 w-full object-cover"
+                />
+              )}
               <div className="p-6">
                 <div className="mb-3 flex items-center gap-2">
                   <span className="rounded-full bg-orange-500/20 px-3 py-1 text-sm font-medium text-orange-300">
@@ -172,7 +264,7 @@ const Blog = () => {
           </div>
         )}
 
-        {!hasMorePosts && (
+        {activeTab === 'security' && !hasMorePosts && (
           <div className="mt-10 text-center">
             <a
               href={mediumProfileUrl}
