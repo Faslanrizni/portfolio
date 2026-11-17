@@ -123,6 +123,15 @@ const cloudPosts = [
     image:'https://miro.medium.com/v2/resize:fit:640/format:webp/1*RG9HJ9OkaT4MPKLsVAsOQQ.jpeg',
     badge: 'Google Cloud',
   },
+  {
+    title: 'Google Cloud App Engine Hands-On: Deploying a Python App, Versions and Traffic Splitting',
+    summary:
+      'Explored Google Cloud App Engine Standard environment, Python runtime configuration, Cloud Build integration, service account IAM roles, and CLI-based deployment. Implemented application versioning, instance monitoring, autoscaling, and 50/50 traffic splitting for controlled releases.',
+
+    link: 'https://medium.com/@faslan2002rizni/google-cloud-app-engine-hands-on-deploying-a-python-app-versions-and-traffic-splitting-88ac1caa1d86',
+    image:'https://miro.medium.com/v2/resize:fit:1100/format:webp/1*9yE6sXHTf0nMYYeRCmpuLw.png',
+    badge: 'Google Cloud',
+  },
 ];
 
 const Blog = () => {
