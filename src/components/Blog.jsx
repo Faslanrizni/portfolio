@@ -132,6 +132,24 @@ const cloudPosts = [
     image:'https://miro.medium.com/v2/resize:fit:1100/format:webp/1*9yE6sXHTf0nMYYeRCmpuLw.png',
     badge: 'Google Cloud',
   },
+  {
+    title: 'Google Cloud App Engine in Practice: Multiple Services, Scaling, Routing and Zero-Downtime Releases',
+    summary:
+      'Explore Google Cloud App Engine through hands-on implementation of **multiple services, traffic routing, autoscaling, version management, and zero-downtime deployments**. Learn how to build, scale, and manage reliable applications using Google Cloud Platform (GCP).',
+
+    link: 'https://medium.com/@faslan2002rizni/google-cloud-app-engine-in-practice-multiple-services-scaling-routing-and-zero-downtime-releases-5d3618ab07df',
+    image:'https://miro.medium.com/v2/resize:fit:720/format:webp/1*0bJsUTSPHC84lLVTEP8AjQ.png',
+    badge: 'Google Cloud',
+  },
+   {
+    title: 'Hands On with Google Cloud Run: Services, Functions, Revisions and Traffic Splitting',
+    summary:
+      'Explore Google Cloud Run through a hands-on guide covering **Services, Functions, Revisions, Traffic Splitting, and Autoscaling**. Learn how to deploy and manage serverless containerized applications using Google Cloud Platform (GCP).',
+
+    link: 'https://medium.com/@faslan2002rizni/hands-on-with-google-cloud-run-services-functions-revisions-and-traffic-splitting-be850b11d9e7',
+    image:'https://miro.medium.com/v2/resize:fit:720/format:webp/1*imU4ooI6_-6wqZZ4Ial0Lw.png',
+    badge: 'Google Cloud',
+  },
 ];
 
 const Blog = () => {
